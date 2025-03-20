@@ -1,5 +1,5 @@
-import HomeLanding from '@/components/HomeLanding';
-import WhoWeAre from '@/components/WhoWeAre';
+import HomeLanding from '@/components/Home/HomeLanding';
+import WhoWeAre from '@/components/Home/WhoWeAre';
 export default function Home() {
   return (
     <main>
