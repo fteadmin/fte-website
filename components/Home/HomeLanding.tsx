@@ -2,11 +2,30 @@
 
 import * as React from 'react';
 import { motion } from 'framer-motion';
-import { Play, ArrowRight } from 'lucide-react';
+import { Play, ArrowRight, ChevronDown } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 export default function HomeLanding() {
+  // State to track client-side rendering
+  const [isMounted, setIsMounted] = useState(false);
+  
+  // Scroll to the next section when the scroll button is clicked
+  const scrollToNextSection = () => {
+    if (typeof window !== 'undefined') {
+      window.scrollTo({
+        top: window.innerHeight,
+        behavior: 'smooth'
+      });
+    }
+  };
+  
+  // Set isMounted to true when component mounts on client
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+  
   return (
-    <div className="relative min-h-screen w-full overflow-hidden">
+    <div className="relative min-h-[85vh] w-full overflow-hidden">
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#010E2F] via-[#0A2472] to-[#0E6BA8]">
         {/* Animated gradient overlay */}
@@ -52,42 +71,41 @@ export default function HomeLanding() {
           className="absolute bottom-[-15%] left-[-5%] w-[400px] h-[400px] border-[30px] border-[#0E6BA8]"
         />
         
-        {/* Small floating circles */}
-        {[...Array(5)].map((_, i) => (
-          <motion.div
-            key={i}
-            initial={{ 
-              opacity: 0, 
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
-            }}
-            animate={{ 
-              opacity: 0.15,
-              x: [
-                Math.random() * window.innerWidth * 0.8,
-                Math.random() * window.innerWidth * 0.8,
-                Math.random() * window.innerWidth * 0.8
-              ],
-              y: [
-                Math.random() * window.innerHeight * 0.8,
-                Math.random() * window.innerHeight * 0.8,
-                Math.random() * window.innerHeight * 0.8
-              ]
-            }}
-            transition={{ 
-              duration: 15 + Math.random() * 20,
-              repeat: Infinity,
-              repeatType: "reverse",
-              ease: "easeInOut",
-              delay: i * 2
-            }}
-            className={`absolute w-${Math.floor(10 + Math.random() * 20)} h-${Math.floor(10 + Math.random() * 20)} rounded-full bg-white`}
-            style={{
-              width: `${20 + Math.random() * 50}px`,
-              height: `${20 + Math.random() * 50}px`
-            }}
-          />
-        ))}
+        {/* Small floating circles - pre-defined positions for SSR */}
+        {[...Array(5)].map((_, i) => {
+          // Pre-defined positions for server rendering
+          const positions = [
+            { x: [100, 300, 200], y: [200, 100, 300] },
+            { x: [500, 200, 400], y: [100, 300, 200] },
+            { x: [300, 500, 100], y: [300, 200, 100] },
+            { x: [200, 400, 300], y: [150, 250, 350] },
+            { x: [400, 100, 500], y: [250, 350, 150] }
+          ];
+          
+          return (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0 }}
+              animate={{ 
+                opacity: 0.15,
+                x: positions[i].x,
+                y: positions[i].y
+              }}
+              transition={{ 
+                duration: 15 + (i * 5),
+                repeat: Infinity,
+                repeatType: "reverse",
+                ease: "easeInOut",
+                delay: i * 2
+              }}
+              className="absolute rounded-full bg-white"
+              style={{
+                width: `${20 + (i * 10)}px`, 
+                height: `${20 + (i * 10)}px`
+              }}
+            />
+          );
+        })}
         
         {/* Diagonal lines */}
         <motion.div
@@ -140,11 +158,33 @@ export default function HomeLanding() {
           }}
           className="absolute left-[15%] bottom-[25%] w-6 h-6 rounded-full bg-white"
         />
+        
+        {/* New animated hexagon */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ 
+            opacity: 0.12,
+            rotate: [0, 60],
+            scale: [0.9, 1.1, 0.9]
+          }}
+          transition={{ 
+            duration: 25, 
+            repeat: Infinity,
+            ease: "easeInOut" 
+          }}
+          className="absolute top-[40%] left-[10%]"
+          style={{
+            width: '120px',
+            height: '104px',
+            background: '#0E6BA8',
+            clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
+          }}
+        />
       </div>
       
       {/* Content */}
-      <div className="relative z-10 flex items-center min-h-screen">
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="relative z-10 flex items-center min-h-[85vh]">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -199,6 +239,29 @@ export default function HomeLanding() {
           </motion.div>
         </div>
       </div>
+
+      {/* Scroll down button */}
+      <motion.div 
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.2, duration: 0.8 }}
+        className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-20"
+      >
+        <button 
+          onClick={scrollToNextSection}
+          className="flex flex-col items-center gap-2 text-white hover:text-white/80 transition-colors duration-300"
+          aria-label="Scroll down"
+        >
+          <span className="text-sm font-vietnam-pro tracking-wider">Discover More</span>
+          <motion.div
+            animate={{ y: [0, 5, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+            className="bg-white/20 hover:bg-white/30 p-3 rounded-full transition-colors duration-300"
+          >
+            <ChevronDown size={18} />
+          </motion.div>
+        </button>
+      </motion.div>
 
       {/* Bottom gradient overlay */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#010E2F] to-transparent z-10" />
