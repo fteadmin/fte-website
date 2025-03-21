@@ -4,6 +4,7 @@ import * as React from 'react';
 import { motion } from 'framer-motion';
 import { Play, ArrowRight, ChevronDown } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import Link from 'next/link'; // Import Link from next/link
 
 export default function HomeLanding() {
   // State to track client-side rendering
@@ -231,10 +232,10 @@ export default function HomeLanding() {
                 <div className="absolute inset-0 rounded-full border-2 border-white -m-0.5 group-hover:scale-105 transition-transform duration-300" />
               </button>
               
-              <button className="group relative px-8 py-4 bg-transparent text-white rounded-full font-vietnam-pro font-semibold hover:bg-white/10 transition-all duration-300 flex items-center border-2 border-white">
+              <Link href="/about" className="group relative px-8 py-4 bg-transparent text-white rounded-full font-vietnam-pro font-semibold hover:bg-white/10 transition-all duration-300 flex items-center border-2 border-white">
                 Learn More
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-              </button>
+              </Link>
             </motion.div>
           </motion.div>
         </div>
