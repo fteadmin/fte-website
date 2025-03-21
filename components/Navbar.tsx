@@ -30,7 +30,6 @@ const lifeConnectContent = {
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Close mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const mobileMenu = document.getElementById('mobile-menu');
@@ -52,7 +51,6 @@ export default function Navbar() {
     };
   }, [isMobileMenuOpen]);
 
-  // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -67,10 +65,8 @@ export default function Navbar() {
 
   return (
     <div className="fixed w-full z-50">
-      {/* Gradient background */}
       <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-[#010E2F] via-[#0A2472] to-[#0E6BA8] opacity-90" />
       
-      {/* Navbar content */}
       <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex h-20 items-center justify-between">
@@ -78,7 +74,6 @@ export default function Navbar() {
               FTE
             </Link>
 
-            {/* Mobile menu button */}
             <button
               id="menu-button"
               className="lg:hidden text-white"
@@ -92,7 +87,6 @@ export default function Navbar() {
               )}
             </button>
 
-            {/* Desktop Navigation */}
             <NavigationMenu className="hidden lg:block">
               <NavigationMenuList className="gap-1">
                 <NavigationMenuItem>
@@ -156,6 +150,13 @@ export default function Navbar() {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
+                  <Link href="/membership" legacyBehavior passHref>
+                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent text-white hover:bg-white/10")}>
+                      Membership
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
                   <Link href="/contact" legacyBehavior passHref>
                     <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent text-white hover:bg-white/10")}>
                       Contact
@@ -167,7 +168,6 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile menu */}
         <div
           id="mobile-menu"
           className={`lg:hidden fixed inset-0 bg-[#010E2F]/95 backdrop-blur-sm transition-transform duration-300 ${
@@ -189,6 +189,13 @@ export default function Navbar() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 About
+              </Link>
+              <Link 
+                href="/membership" 
+                className="text-white text-lg py-2 hover:bg-white/10 rounded-md px-3"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Membership
               </Link>
               <div className="py-2">
                 <h3 className="text-white text-lg mb-2 px-3">Pro Tribe</h3>

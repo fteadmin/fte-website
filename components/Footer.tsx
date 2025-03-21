@@ -63,10 +63,16 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/membership" className="text-white/80 hover:text-white transition-colors">
+                  Membership
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className="text-white/80 hover:text-white transition-colors">
                   Contact
                 </Link>
               </li>
+             
             </ul>
           </motion.div>
 
@@ -81,15 +87,15 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-center gap-2 text-white/80">
                 <MapPin className="h-5 w-5 flex-shrink-0" />
-                <span>123 Innovation Drive, Tech City, TC 12345</span>
+                <span> 777 Alameda 2nd Floor, Los Angeles, CA 90021</span>
               </li>
               <li className="flex items-center gap-2 text-white/80">
                 <Phone className="h-5 w-5 flex-shrink-0" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 (888) 948-1118</span>
               </li>
               <li className="flex items-center gap-2 text-white/80">
                 <Mail className="h-5 w-5 flex-shrink-0" />
-                <span>info@futuretrends.com</span>
+                <span>admin@futuretrends.com</span>
               </li>
             </ul>
           </motion.div>
