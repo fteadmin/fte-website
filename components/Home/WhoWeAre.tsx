@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Building2, Leaf, Network, Trophy, Users, Globe } from 'lucide-react';
+import { Building2, Leaf, Network } from 'lucide-react';
 import Image from 'next/image';
 
 export default function WhoWeAre() {
@@ -18,66 +18,84 @@ export default function WhoWeAre() {
         >
           <h2 className="text-4xl font-bold text-[#010E2F] mb-6">Who We Are</h2>
           <p className="text-lg text-gray-600 max-w-3xl">
-            Future Trends Enterprise (FTE) is a forward-thinking technology startup that seamlessly integrates advanced solutions across
+            Future Trends Enterprise (FTE) is a forward-thinking technology company that seamlessly integrates advanced solutions across
             digital and physical spaces.
           </p>
         </motion.div>
 
-        {/* Pro Tribe and Life Connect Cards */}
-        <div className="grid md:grid-cols-2 gap-12 mb-20">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative overflow-hidden rounded-2xl"
-          >
-            <div className="absolute inset-0">
-              <Image
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
-                alt="Pro Tribe"
-                fill
-                className="object-cover brightness-50"
-              />
-            </div>
-            <div className="relative p-8 bg-gradient-to-r from-[#010E2F]/90">
-              <div className="flex items-center gap-3 mb-4">
-                <Building2 className="h-8 w-8 text-white" />
-                <h3 className="text-2xl font-semibold text-white">Pro Tribe Ecosystem</h3>
+        {/* Platform Sections - Updated Layout */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mb-20"
+        >
+          <h3 className="text-2xl font-bold text-[#010E2F] mb-10">Our Flagship Platforms</h3>
+          
+          {/* Pro Tribe Section */}
+          <div className="flex flex-col md:flex-row gap-8 mb-12 items-center">
+            <div className="w-full md:w-2/5 flex justify-center">
+              <div className="bg-[#010E2F]/5 rounded-xl p-8 flex items-center justify-center h-60 w-full md:w-80">
+                <Image 
+                  src="/assets/logos/protribe.png" 
+                  alt="Pro Tribe Logo" 
+                  width={300} 
+                  height={120} 
+                  className="w-full max-w-[250px] h-auto object-contain"
+                />
               </div>
-              <p className="text-white/90">
-                A comprehensive business incubator that builds new ventures, collaborates with existing businesses, and
-                provides growth solutions through our extensive networks and resources.
-              </p>
             </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative overflow-hidden rounded-2xl"
-          >
-            <div className="absolute inset-0">
-              <Image
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
-                alt="Life Connect"
-                fill
-                className="object-cover brightness-50"
-              />
-            </div>
-            <div className="relative p-8 bg-gradient-to-r from-[#010E2F]/90">
-              <div className="flex items-center gap-3 mb-4">
-                <Leaf className="h-8 w-8 text-white" />
-                <h3 className="text-2xl font-semibold text-white">Life Connect</h3>
+            <div className="w-full md:w-3/5">
+              <div className="bg-gradient-to-r from-[#010E2F] to-[#0A2472] text-white p-8 rounded-xl h-full">
+                <h4 className="text-2xl font-bold mb-4 flex items-center">
+                  <Building2 className="h-6 w-6 mr-2" />
+                  Pro Tribe Ecosystem
+                </h4>
+                <p className="text-white/90 mb-4">
+                  A comprehensive business incubator that builds new ventures, collaborates with existing businesses, and
+                  provides growth solutions through our extensive networks and resources.
+                </p>
+                <ul className="list-disc pl-5 mt-3 text-white/80">
+                  <li>Business development and strategic guidance</li>
+                  <li>Access to industry networks and potential partners</li>
+                  <li>Digital transformation solutions</li>
+                </ul>
               </div>
-              <p className="text-white/90">
-                Our social engine platform focused on community building and increasing exposure for our partners.
-              </p>
             </div>
-          </motion.div>
-        </div>
+          </div>
+          
+          {/* Life Connect Section */}
+          <div className="flex flex-col md:flex-row-reverse gap-8 items-center">
+            <div className="w-full md:w-2/5 flex justify-center">
+              <div className="bg-[#010E2F]/5 rounded-xl p-8 flex items-center justify-center h-60 w-full md:w-80">
+                {/* Placeholder for Life Connect logo - enhanced version */}
+                <div className="flex flex-col items-center gap-3">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#0A2472] to-[#0E6BA8] rounded-full flex items-center justify-center">
+                    <Leaf className="h-10 w-10 text-white" />
+                  </div>
+                  <span className="text-2xl font-bold text-[#010E2F]">Life Connect</span>
+                </div>
+              </div>
+            </div>
+            <div className="w-full md:w-3/5">
+              <div className="bg-gradient-to-r from-[#0E6BA8] to-[#0A2472] text-white p-8 rounded-xl h-full">
+                <h4 className="text-2xl font-bold mb-4 flex items-center">
+                  <Leaf className="h-6 w-6 mr-2" />
+                  Life Connect Platform
+                </h4>
+                <p className="text-white/90 mb-4">
+                  Our social engine platform focused on community building and increasing exposure for our partners.
+                </p>
+                <ul className="list-disc pl-5 mt-3 text-white/80">
+                  <li>Enhanced social networking capabilities</li>
+                  <li>Community-driven engagement features</li>
+                  <li>Integrated business promotion tools</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </motion.div>
 
         {/* Strategic Vision */}
         <motion.div
@@ -87,77 +105,44 @@ export default function WhoWeAre() {
           transition={{ duration: 0.8 }}
           className="mb-20"
         >
-          <h3 className="text-2xl font-bold text-[#010E2F] mb-6">Our Strategic Vision</h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="flex items-center gap-4 p-6 rounded-xl bg-gradient-to-r from-[#010E2F] to-[#0E6BA8] text-white">
-              <Network className="h-6 w-6 flex-shrink-0" />
-              <p>Establishing a thriving business ecosystem that promotes growth and innovation</p>
-            </div>
-            <div className="flex items-center gap-4 p-6 rounded-xl bg-gradient-to-r from-[#010E2F] to-[#0E6BA8] text-white">
-              <Network className="h-6 w-6 flex-shrink-0" />
-              <p>Developing networks of diverse communities to foster collaboration and success</p>
-            </div>
+          <h3 className="text-2xl font-bold text-[#010E2F] mb-6">Strategic Vision</h3>
+          <div className="bg-gradient-to-r from-[#010E2F] to-[#0E6BA8] text-white p-8 rounded-xl">
+            <ul className="list-disc pl-5 space-y-3">
+              <li>Create synergistic ecosystems that capitalize on emerging Web 3.0 technologies.</li>
+              <li>Integration of health tech, fitness tech, sports tech, and entertainment tech.</li>
+              <li>Leverage blockchain, AI, and metaverse technologies for seamless consumer experiences.</li>
+              <li>Build bridges between digital and physical economies through innovative commerce solutions.</li>
+              <li>Develop comprehensive community ecosystems that generate sustainable revenue streams.</li>
+            </ul>
           </div>
         </motion.div>
 
-        {/* Key Achievements */}
+        {/* Company Values */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h3 className="text-2xl font-bold text-[#010E2F] mb-6">Key Achievements</h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="relative group">
-              <div className="absolute inset-0 rounded-2xl overflow-hidden">
-                <Image
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
-                  alt="Global Reach"
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#010E2F] via-[#010E2F]/70 to-transparent" />
-              </div>
-              <div className="relative p-6 pt-40">
-                <Globe className="h-8 w-8 text-white mb-3" />
-                <h4 className="text-xl font-semibold text-white mb-2">Global Reach</h4>
-                <p className="text-white/90">Expanded to 10+ countries worldwide</p>
-              </div>
+          <h3 className="text-2xl font-bold text-[#010E2F] mb-6">Our Values</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="p-6 rounded-xl border border-[#010E2F]/10 bg-white shadow-sm">
+              <h4 className="text-xl font-semibold text-[#010E2F] mb-3">Innovation</h4>
+              <p className="text-gray-600">
+                We constantly push the boundaries of what's possible, using technology to create new opportunities and solutions.
+              </p>
             </div>
-
-            <div className="relative group">
-              <div className="absolute inset-0 rounded-2xl overflow-hidden">
-                <Image
-                  src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80"
-                  alt="Community Growth"
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#010E2F] via-[#010E2F]/70 to-transparent" />
-              </div>
-              <div className="relative p-6 pt-40">
-                <Users className="h-8 w-8 text-white mb-3" />
-                <h4 className="text-xl font-semibold text-white mb-2">Community Growth</h4>
-                <p className="text-white/90">100,000+ active community members</p>
-              </div>
+            <div className="p-6 rounded-xl border border-[#010E2F]/10 bg-white shadow-sm">
+              <h4 className="text-xl font-semibold text-[#010E2F] mb-3">Community</h4>
+              <p className="text-gray-600">
+                We believe in building strong communities that provide value, support, and opportunity for all members.
+              </p>
             </div>
-
-            <div className="relative group">
-              <div className="absolute inset-0 rounded-2xl overflow-hidden">
-                <Image
-                  src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?auto=format&fit=crop&w=800&q=80"
-                  alt="Success Stories"
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#010E2F] via-[#010E2F]/70 to-transparent" />
-              </div>
-              <div className="relative p-6 pt-40">
-                <Trophy className="h-8 w-8 text-white mb-3" />
-                <h4 className="text-xl font-semibold text-white mb-2">Success Stories</h4>
-                <p className="text-white/90">500+ businesses successfully launched</p>
-              </div>
+            <div className="p-6 rounded-xl border border-[#010E2F]/10 bg-white shadow-sm">
+              <h4 className="text-xl font-semibold text-[#010E2F] mb-3">Excellence</h4>
+              <p className="text-gray-600">
+                We are committed to excellence in everything we do, from product development to customer service.
+              </p>
             </div>
           </div>
         </motion.div>

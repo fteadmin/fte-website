@@ -1,8 +1,11 @@
-
+import ProTribeHero from "@/components/Pro-tribe/ProTribeHero";
+import ProtribeContent from "@/components/Pro-tribe/ProtribeContent";
 export default function ProTribePage() {
   return (
     <div>
-      <h1>Pro Tribe</h1>
+      <ProTribeHero />
+      <ProtribeContent />
+    
     </div>
   );
 }

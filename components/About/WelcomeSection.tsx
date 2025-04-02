@@ -57,8 +57,8 @@ export default function WelcomeSection() {
             className="relative h-[400px] md:h-[500px] rounded-xl overflow-hidden shadow-xl"
           >
             <Image
-              src="/images/about/business-meeting.jpg" 
-              alt="FTE Business Meeting"
+              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80"
+              alt="Business professionals collaborating"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"

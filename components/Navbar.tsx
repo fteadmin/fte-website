@@ -1,3 +1,4 @@
+
 'use client';
 
 import * as React from 'react';
@@ -18,7 +19,14 @@ import { useState, useEffect } from 'react';
 const proTribeContent = {
   title: 'Pro Tribe',
   description: 'At Pro Tribe, we believe in the power of collaboration, where every dollar spent within our community circulates back to fuel the growth of our members.',
-  businesses: ['Business 1', 'Business 2', 'Business 3']
+  businesses: [
+    'Sage Hospital', 
+    'Zariel and Co', 
+    'Phylos', 
+    'Nx LVL', 
+    'Good Chef Co', 
+    'Launch Couture'
+  ]
 };
 
 const lifeConnectContent = {
@@ -112,11 +120,21 @@ export default function Navbar() {
                         <div className="text-sm font-medium">{proTribeContent.title}</div>
                       </div>
                       <p className="text-sm text-white/70 mt-2">{proTribeContent.description}</p>
-                      <div className="grid gap-2 mt-4">
+                      
+                      {/* Added Pro Tribe main page link */}
+                      <Link
+                        href="/pro-tribe"
+                        className="block p-2 mt-4 text-white bg-white/10 hover:bg-white/20 rounded-md transition-colors font-medium"
+                      >
+                        Pro Tribe Overview
+                      </Link>
+                      
+                      <div className="grid gap-2 mt-3">
+                        <div className="text-white/80 text-xs uppercase tracking-wide pl-2">Our Businesses</div>
                         {proTribeContent.businesses.map((business) => (
                           <Link
                             key={business}
-                            href={`/pro-tribe/${business.toLowerCase().replace(' ', '-')}`}
+                            href={`/pro-tribe/${business.toLowerCase().replace(/\s+/g, '-')}`}
                             className="block p-2 text-white hover:bg-white/10 rounded-md transition-colors"
                           >
                             {business}
@@ -135,11 +153,21 @@ export default function Navbar() {
                         <div className="text-sm font-medium">{lifeConnectContent.title}</div>
                       </div>
                       <p className="text-sm text-white/70 mt-2">{lifeConnectContent.description}</p>
-                      <div className="grid gap-2 mt-4">
+                      
+                      {/* Added Life Connect main page link for consistency */}
+                      <Link
+                        href="/life-connect"
+                        className="block p-2 mt-4 text-white bg-white/10 hover:bg-white/20 rounded-md transition-colors font-medium"
+                      >
+                        Life Connect Overview
+                      </Link>
+                      
+                      <div className="grid gap-2 mt-3">
+                        <div className="text-white/80 text-xs uppercase tracking-wide pl-2">Explore Areas</div>
                         {lifeConnectContent.businesses.map((business) => (
                           <Link
                             key={business}
-                            href={`/life-connect/${business.toLowerCase().replace(' ', '-')}`}
+                            href={`/life-connect/${business.toLowerCase().replace(/\s+/g, '-')}`}
                             className="block p-2 text-white hover:bg-white/10 rounded-md transition-colors"
                           >
                             {business}
@@ -199,11 +227,19 @@ export default function Navbar() {
               </Link>
               <div className="py-2">
                 <h3 className="text-white text-lg mb-2 px-3">Pro Tribe</h3>
-                <div className="space-y-1">
+                {/* Added Pro Tribe main page link in mobile menu */}
+                <Link
+                  href="/pro-tribe"
+                  className="block text-white py-2 hover:bg-white/10 rounded-md px-6 font-medium"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Pro Tribe Overview
+                </Link>
+                <div className="space-y-1 mt-2">
                   {proTribeContent.businesses.map((business) => (
                     <Link
                       key={business}
-                      href={`/pro-tribe/${business.toLowerCase().replace(' ', '-')}`}
+                      href={`/pro-tribe/${business.toLowerCase().replace(/\s+/g, '-')}`}
                       className="block text-white/70 py-2 hover:bg-white/10 rounded-md px-6"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
@@ -214,11 +250,19 @@ export default function Navbar() {
               </div>
               <div className="py-2">
                 <h3 className="text-white text-lg mb-2 px-3">Life Connect</h3>
-                <div className="space-y-1">
+                {/* Added Life Connect main page link in mobile menu */}
+                <Link
+                  href="/life-connect"
+                  className="block text-white py-2 hover:bg-white/10 rounded-md px-6 font-medium"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Life Connect Overview
+                </Link>
+                <div className="space-y-1 mt-2">
                   {lifeConnectContent.businesses.map((business) => (
                     <Link
                       key={business}
-                      href={`/life-connect/${business.toLowerCase().replace(' ', '-')}`}
+                      href={`/life-connect/${business.toLowerCase().replace(/\s+/g, '-')}`}
                       className="block text-white/70 py-2 hover:bg-white/10 rounded-md px-6"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >

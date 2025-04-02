@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
@@ -10,37 +10,47 @@ interface BusinessProps {
   category: string;
 }
 
-const BusinessLogo = ({ name, logoSrc, category }: BusinessProps) => (
-  <div className="flex flex-col items-center justify-center p-6 bg-white/5 backdrop-blur-sm rounded-lg hover:bg-white/10 transition-all duration-300 h-40">
-    {logoSrc ? (
-      <Image 
-        src={logoSrc} 
-        alt={`${name} logo`} 
-        width={120} 
-        height={80} 
-        className="object-contain max-h-16 filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity duration-300 mb-4"
-      />
-    ) : (
-      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center mb-4">
-        <span className="text-2xl font-bold text-white">
-          {name.charAt(0)}
-        </span>
-      </div>
-    )}
-    <h3 className="text-white font-medium text-center">{name}</h3>
-    <p className="text-xs text-white/70 mt-1">{category}</p>
-  </div>
-);
+const BusinessLogo = ({ name, logoSrc, category }: BusinessProps) => {
+  const [imageError, setImageError] = useState(false);
+
+  return (
+    <div className="flex flex-col items-center justify-center p-6 bg-white/5 backdrop-blur-sm rounded-lg hover:bg-white/10 transition-all duration-300 h-40">
+      {logoSrc && !imageError ? (
+        <div className="h-16 w-full flex items-center justify-center mb-4">
+          <Image 
+            src={logoSrc} 
+            alt={`${name} logo`} 
+            width={120} 
+            height={80} 
+            className="object-contain h-16 w-auto"
+            // Remove filters that might make logos invisible
+            // filter brightness-0 invert opacity-80 hover:opacity-100
+            onError={() => setImageError(true)}
+          />
+        </div>
+      ) : (
+        <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center mb-4">
+          <span className="text-2xl font-bold text-white">
+            {name.charAt(0)}
+          </span>
+        </div>
+      )}
+      <h3 className="text-white font-medium text-center">{name}</h3>
+      <p className="text-xs text-white/70 mt-1">{category}</p>
+    </div>
+  );
+};
 
 export default function BusinessLogos() {
-  // Actual FTE businesses and verticals
+  // Actual FTE businesses and verticals with updated logo paths
   const businesses = [
-    { name: "WaiterPay", category: "Finance", logoSrc: "/logos/waiterpay.svg" },
-    { name: "Olive Fertility", category: "Health & Wellness", logoSrc: "/logos/olive.svg" },
-    { name: "Chef's Kitchen", category: "Culinary", logoSrc: "/logos/chefs.svg" },
-    { name: "EduTech", category: "Education", logoSrc: "/logos/edutech.svg" },
-    { name: "Media Ventures", category: "Multimedia", logoSrc: "/logos/media.svg" },
-    { name: "AgriTech Farm", category: "Agriculture", logoSrc: "/logos/agritech.svg" },
+    { name: "Sage Hospital", category: "Healthcare", logoSrc: "/assets/logos/sage.jpg" },
+    { name: "Zariel and Co", category: "Fashion & Lifestyle", logoSrc: "/assets/logos/z.jpg" },
+    { name: "Phylos", category: "Technology", logoSrc: "/assets/logos/phylos.png" },
+    { name: "Nx LVL", category: "Entertainment", logoSrc: "/assets/logos/nx.jpg" },
+    // Updated paths for Good Chef Co and Launch Couture with correct filenames
+    { name: "Good Chef Co", category: "Food & Beverage", logoSrc: "/assets/logos/good.png" },
+    { name: "Launch Couture", category: "Fashion & Lifestyle", logoSrc: "/assets/logos/lc.png" },
   ];
 
   return (
