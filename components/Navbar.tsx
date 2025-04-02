@@ -13,7 +13,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
-import { Building2, Leaf, Menu, X } from 'lucide-react';
+import { Building2, Leaf, Menu, X, ChevronDown, ChevronRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const proTribeContent = {
@@ -37,7 +37,10 @@ const lifeConnectContent = {
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isProTribeOpen, setIsProTribeOpen] = useState(false);
+  const [isLifeConnectOpen, setIsLifeConnectOpen] = useState(false);
 
+  // Close mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const mobileMenu = document.getElementById('mobile-menu');
@@ -59,6 +62,7 @@ export default function Navbar() {
     };
   }, [isMobileMenuOpen]);
 
+  // Disable body scroll when mobile menu is open
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -71,6 +75,21 @@ export default function Navbar() {
     };
   }, [isMobileMenuOpen]);
 
+  // Toggle mobile menu
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  // Toggle Pro Tribe dropdown in mobile view
+  const toggleProTribe = () => {
+    setIsProTribeOpen(!isProTribeOpen);
+  };
+
+  // Toggle Life Connect dropdown in mobile view
+  const toggleLifeConnect = () => {
+    setIsLifeConnectOpen(!isLifeConnectOpen);
+  };
+
   return (
     <div className="fixed w-full z-50">
       <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-[#010E2F] via-[#0A2472] to-[#0E6BA8] opacity-90" />
@@ -82,11 +101,12 @@ export default function Navbar() {
               FTE
             </Link>
 
+            {/* Single toggle button that changes between hamburger and X */}
             <button
               id="menu-button"
-              className="lg:hidden text-white"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle menu"
+              className="lg:hidden text-white z-50"
+              onClick={toggleMobileMenu}
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             >
               {isMobileMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -121,7 +141,7 @@ export default function Navbar() {
                       </div>
                       <p className="text-sm text-white/70 mt-2">{proTribeContent.description}</p>
                       
-                      {/* Added Pro Tribe main page link */}
+                      {/* Pro Tribe main page link */}
                       <Link
                         href="/pro-tribe"
                         className="block p-2 mt-4 text-white bg-white/10 hover:bg-white/20 rounded-md transition-colors font-medium"
@@ -154,7 +174,7 @@ export default function Navbar() {
                       </div>
                       <p className="text-sm text-white/70 mt-2">{lifeConnectContent.description}</p>
                       
-                      {/* Added Life Connect main page link for consistency */}
+                      {/* Life Connect main page link */}
                       <Link
                         href="/life-connect"
                         className="block p-2 mt-4 text-white bg-white/10 hover:bg-white/20 rounded-md transition-colors font-medium"
@@ -196,85 +216,124 @@ export default function Navbar() {
           </div>
         </div>
 
+        {/* Mobile Menu - Fixed positioning and proper transitions */}
         <div
           id="mobile-menu"
-          className={`lg:hidden fixed inset-0 bg-[#010E2F]/95 backdrop-blur-sm transition-transform duration-300 ${
-            isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          className={`lg:hidden fixed inset-0 bg-[#010E2F]/95 backdrop-blur-sm transition-all duration-300 ${
+            isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
           }`}
+          style={{ zIndex: 40 }}
         >
-          <div className="pt-24 px-6">
+          <div className="pt-24 px-6 pb-16">
             <nav className="grid gap-2">
               <Link 
                 href="/" 
                 className="text-white text-lg py-2 hover:bg-white/10 rounded-md px-3"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={toggleMobileMenu}
               >
                 Home
               </Link>
               <Link 
                 href="/about" 
                 className="text-white text-lg py-2 hover:bg-white/10 rounded-md px-3"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={toggleMobileMenu}
               >
                 About
               </Link>
               <Link 
                 href="/membership" 
                 className="text-white text-lg py-2 hover:bg-white/10 rounded-md px-3"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={toggleMobileMenu}
               >
                 Membership
               </Link>
+              
+              {/* Pro Tribe Dropdown */}
               <div className="py-2">
-                <h3 className="text-white text-lg mb-2 px-3">Pro Tribe</h3>
-                {/* Added Pro Tribe main page link in mobile menu */}
-                <Link
-                  href="/pro-tribe"
-                  className="block text-white py-2 hover:bg-white/10 rounded-md px-6 font-medium"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                <button 
+                  onClick={toggleProTribe}
+                  className="flex items-center justify-between w-full text-white text-lg py-2 px-3 hover:bg-white/10 rounded-md"
+                  type="button"
                 >
-                  Pro Tribe Overview
-                </Link>
-                <div className="space-y-1 mt-2">
-                  {proTribeContent.businesses.map((business) => (
+                  <span>Pro Tribe</span>
+                  {isProTribeOpen ? (
+                    <ChevronDown className="h-5 w-5" />
+                  ) : (
+                    <ChevronRight className="h-5 w-5" />
+                  )}
+                </button>
+                
+                {isProTribeOpen && (
+                  <div className="mt-1 space-y-1 pl-3">
                     <Link
-                      key={business}
-                      href={`/pro-tribe/${business.toLowerCase().replace(/\s+/g, '-')}`}
-                      className="block text-white/70 py-2 hover:bg-white/10 rounded-md px-6"
-                      onClick={() => setIsMobileMenuOpen(false)}
+                      href="/pro-tribe"
+                      className="flex items-center text-white py-2 hover:bg-white/10 rounded-md px-3 font-medium"
+                      onClick={toggleMobileMenu}
                     >
-                      {business}
+                      <Building2 className="h-4 w-4 mr-2" />
+                      Pro Tribe Overview
                     </Link>
-                  ))}
-                </div>
+                    <div className="pl-2 border-l border-white/20 ml-1 space-y-1 mt-2">
+                      {proTribeContent.businesses.map((business) => (
+                        <Link
+                          key={business}
+                          href={`/pro-tribe/${business.toLowerCase().replace(/\s+/g, '-')}`}
+                          className="flex items-center text-white/80 py-2 hover:bg-white/10 rounded-md px-3 hover:text-white"
+                          onClick={toggleMobileMenu}
+                        >
+                          {business}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
+              
+              {/* Life Connect Dropdown */}
               <div className="py-2">
-                <h3 className="text-white text-lg mb-2 px-3">Life Connect</h3>
-                {/* Added Life Connect main page link in mobile menu */}
-                <Link
-                  href="/life-connect"
-                  className="block text-white py-2 hover:bg-white/10 rounded-md px-6 font-medium"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                <button 
+                  onClick={toggleLifeConnect}
+                  className="flex items-center justify-between w-full text-white text-lg py-2 px-3 hover:bg-white/10 rounded-md"
+                  type="button"
                 >
-                  Life Connect Overview
-                </Link>
-                <div className="space-y-1 mt-2">
-                  {lifeConnectContent.businesses.map((business) => (
+                  <span>Life Connect</span>
+                  {isLifeConnectOpen ? (
+                    <ChevronDown className="h-5 w-5" />
+                  ) : (
+                    <ChevronRight className="h-5 w-5" />
+                  )}
+                </button>
+                
+                {isLifeConnectOpen && (
+                  <div className="mt-1 space-y-1 pl-3">
                     <Link
-                      key={business}
-                      href={`/life-connect/${business.toLowerCase().replace(/\s+/g, '-')}`}
-                      className="block text-white/70 py-2 hover:bg-white/10 rounded-md px-6"
-                      onClick={() => setIsMobileMenuOpen(false)}
+                      href="/life-connect"
+                      className="flex items-center text-white py-2 hover:bg-white/10 rounded-md px-3 font-medium"
+                      onClick={toggleMobileMenu}
                     >
-                      {business}
+                      <Leaf className="h-4 w-4 mr-2" />
+                      Life Connect Overview
                     </Link>
-                  ))}
-                </div>
+                    <div className="pl-2 border-l border-white/20 ml-1 space-y-1 mt-2">
+                      {lifeConnectContent.businesses.map((business) => (
+                        <Link
+                          key={business}
+                          href={`/life-connect/${business.toLowerCase().replace(/\s+/g, '-')}`}
+                          className="flex items-center text-white/80 py-2 hover:bg-white/10 rounded-md px-3 hover:text-white"
+                          onClick={toggleMobileMenu}
+                        >
+                          {business}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
+              
               <Link 
                 href="/contact" 
                 className="text-white text-lg py-2 hover:bg-white/10 rounded-md px-3"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={toggleMobileMenu}
               >
                 Contact
               </Link>
