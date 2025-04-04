@@ -21,7 +21,6 @@ interface BusinessPageProps {
     phone: string;
     address: string;
   };
-  heroImage: string;
 }
 
 export default function BusinessPage({ 
@@ -30,23 +29,13 @@ export default function BusinessPage({
   logo, 
   website, 
   social, 
-  contact,
-  heroImage 
+  contact
 }: BusinessPageProps) {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white"> {/* Explicitly set background to white */}
       {/* Hero Section */}
       <section className="relative h-[400px]">
-        <div className="absolute inset-0">
-          <Image
-            src={heroImage}
-            alt={`${name} hero image`}
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/50" />
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#010E2F] via-[#0A2472] to-[#0E6BA8]" />
         
         <div className="relative z-10 h-full flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -62,6 +51,7 @@ export default function BusinessPage({
                   alt={`${name} logo`}
                   fill
                   className="object-contain p-2"
+                  onError={(e) => console.error(`Failed to load image: ${logo}`)}
                 />
               </motion.div>
               
@@ -86,8 +76,8 @@ export default function BusinessPage({
         </div>
       </section>
 
-      {/* Content Section */}
-      <section className="py-16">
+      {/* Content Section - Explicitly set to white background */}
+      <section className="py-16 bg-white text-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-12">
             {/* Main Content */}
@@ -97,8 +87,8 @@ export default function BusinessPage({
               transition={{ duration: 0.5 }}
               className="md:col-span-2"
             >
-              <h2 className="text-2xl font-semibold mb-6">About {name}</h2>
-              <div className="prose prose-lg max-w-none">
+              <h2 className="text-2xl font-semibold mb-6 text-gray-900">About {name}</h2>
+              <div className="prose prose-lg max-w-none text-gray-800">
                 <p>{description}</p>
               </div>
             </motion.div>
@@ -111,31 +101,31 @@ export default function BusinessPage({
               className="space-y-8"
             >
               {/* Contact Information */}
-              <div className="bg-card rounded-xl p-6 shadow-lg">
-                <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
+              <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+                <h3 className="text-xl font-semibold mb-4 text-gray-900">Contact Information</h3>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <Mail className="h-5 w-5 text-blue-600" />
-                    <a href={`mailto:${contact.email}`} className="hover:text-blue-600">
+                    <a href={`mailto:${contact.email}`} className="text-gray-700 hover:text-blue-600">
                       {contact.email}
                     </a>
                   </div>
                   <div className="flex items-center gap-3">
                     <Phone className="h-5 w-5 text-blue-600" />
-                    <a href={`tel:${contact.phone}`} className="hover:text-blue-600">
+                    <a href={`tel:${contact.phone}`} className="text-gray-700 hover:text-blue-600">
                       {contact.phone}
                     </a>
                   </div>
                   <div className="flex items-start gap-3">
                     <MapPin className="h-5 w-5 text-blue-600 flex-shrink-0" />
-                    <span>{contact.address}</span>
+                    <span className="text-gray-700">{contact.address}</span>
                   </div>
                 </div>
               </div>
 
               {/* Social Links */}
-              <div className="bg-card rounded-xl p-6 shadow-lg">
-                <h3 className="text-xl font-semibold mb-4">Connect With Us</h3>
+              <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+                <h3 className="text-xl font-semibold mb-4 text-gray-900">Connect With Us</h3>
                 <div className="flex gap-4">
                   {social.facebook && (
                     <Link 

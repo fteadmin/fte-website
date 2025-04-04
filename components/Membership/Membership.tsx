@@ -109,7 +109,7 @@ export default function Membership() {
   };
 
   return (
-    <section className="py-20 px-4 min-h-screen bg-gradient-to-br from-[#010E2F] via-[#0A2472] to-[#0E6BA8]">
+    <section className="py-20 px-4 min-h-screen bg-gray-200">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

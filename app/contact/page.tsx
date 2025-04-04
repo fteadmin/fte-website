@@ -55,19 +55,19 @@ export default function ContactPage() {
                   <ContactInfo 
                     icon={<MapPin className="h-5 w-5 text-blue-600" />}
                     title="Office Location"
-                    content="123 Innovation Drive, Tech Park, San Francisco, CA 94105"
+                    content="777 Alameda 2nd Floor, Los Angeles, CA 90021"
                   />
                   <ContactInfo 
                     icon={<Phone className="h-5 w-5 text-blue-600" />}
                     title="Phone Number"
-                    content="+1 (555) 123-4567"
-                    link="tel:+15551234567"
+                    content="+1 (888) 948-1118"
+                    link="tel:+888948-1118"
                   />
                   <ContactInfo 
                     icon={<Mail className="h-5 w-5 text-blue-600" />}
                     title="Email Address"
-                    content="contact@futuretrends.com"
-                    link="mailto:contact@futuretrends.com"
+                    content="admin@futuretrends.com"
+                    link="mailto:admin@futuretrends.com"
                   />
                   <ContactInfo 
                     icon={<Clock className="h-5 w-5 text-blue-600" />}
@@ -105,10 +105,10 @@ export default function ContactPage() {
       </section>
       
       {/* FAQ Section */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-gray-50 py-16 text-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold mb-4 text-black">Frequently Asked Questions</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               Find answers to common questions about our services, process, and how we can help your business.
             </p>
@@ -140,18 +140,18 @@ export default function ContactPage() {
         </div>
       </section>
       
-      {/* Map Section */}
-      <section className="h-96 w-full">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.98555098464!2d-122.507640613672!3d37.757815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1616498756950!5m2!1sen!2sus" 
-          width="100%" 
-          height="100%" 
-          style={{ border: 0 }} 
-          allowFullScreen={false} 
-          loading="lazy"
-          title="Office location map"
-        ></iframe>
-      </section>
+     {/* Map Section */}
+    <section className="h-96 w-full">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.7169701268!2d-118.25009848478976!3d34.03962168061125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c63c9fb08f9d%3A0xb5236eb2eb8877ae!2s777%20S%20Alameda%20St%202nd%20Floor%2C%20Los%20Angeles%2C%20CA%2090021!5e0!3m2!1sen!2sus!4v1680531342684!5m2!1sen!2sus" 
+        width="100%" 
+        height="100%" 
+        style={{ border: 0 }} 
+        allowFullScreen={false} 
+        loading="lazy"
+        title="FTE office location at 777 Alameda 2nd Floor, Los Angeles"
+      ></iframe>
+    </section>
     </main>
   );
 }

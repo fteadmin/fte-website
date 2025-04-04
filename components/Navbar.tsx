@@ -1,8 +1,8 @@
-
 'use client';
 
 import * as React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import {
   NavigationMenu,
@@ -20,11 +20,11 @@ const proTribeContent = {
   title: 'Pro Tribe',
   description: 'At Pro Tribe, we believe in the power of collaboration, where every dollar spent within our community circulates back to fuel the growth of our members.',
   businesses: [
+    'Good Chef Co', 
     'Sage Hospital', 
     'Zariel and Co', 
     'Phylos', 
     'Nx LVL', 
-    'Good Chef Co', 
     'Launch Couture'
   ]
 };
@@ -32,7 +32,7 @@ const proTribeContent = {
 const lifeConnectContent = {
   title: 'Life Connect',
   description: 'At Life Connect, we believe that true fulfillment comes from living in harmony with nature and embracing practices that promote overall well-being.',
-  businesses: ['Wellness Center', 'Organic Market', 'Eco Tourism']
+  businesses: ['MaaHarvest', 'Organic Market', 'Eco Tourism']
 };
 
 export default function Navbar() {
@@ -97,8 +97,17 @@ export default function Navbar() {
       <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex h-20 items-center justify-between">
-            <Link href="/" className="text-2xl font-bold text-white">
-              FTE
+            {/* Replace text with logo image */}
+            <Link href="/" className="flex items-center">
+              <div className="relative h-12 w-32">
+                <Image 
+                  src="/assets/logos/logo-dark.png" 
+                  alt="FTE Logo" 
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
             </Link>
 
             {/* Single toggle button that changes between hamburger and X */}
@@ -224,6 +233,18 @@ export default function Navbar() {
           }`}
           style={{ zIndex: 40 }}
         >
+          {/* Add logo to mobile menu as well */}
+          <div className="absolute top-6 left-4">
+            <div className="relative h-10 w-28">
+              <Image 
+                src="/assets/logos/logo.png" 
+                alt="FTE Logo" 
+                fill
+                className="object-contain"
+              />
+            </div>
+          </div>
+          
           <div className="pt-24 px-6 pb-16">
             <nav className="grid gap-2">
               <Link 

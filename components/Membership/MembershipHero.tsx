@@ -8,7 +8,7 @@ interface MembershipHeroProps {
 
 export default function MembershipHero({ scrollToPlans }: MembershipHeroProps) {
   return (
-    <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white overflow-hidden">
+    <section className="relative bg-gradient-to-br from-[#010E2F] via-[#0A2472] to-[#0E6BA8] text-white overflow-hidden">
       {/* Background elements - matching AboutHero styling */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%)]" />

@@ -9,7 +9,7 @@ interface ContactHeroProps {
 
 export default function ContactHero({ title, subtitle }: ContactHeroProps) {
   return (
-    <section className="relative bg-gradient-to-r from-blue-900 to-blue-700 text-white py-24 md:py-32 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-[#010E2F] via-[#0A2472] to-[#0E6BA8] text-white py-24 md:py-32 overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%)]" />

@@ -154,13 +154,13 @@ export default function ProtribeContent() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
+              className="relative h-[400px] rounded-xl overflow-hidden"
             >
               <Image 
-                src="/assets/images/collaboration.jpg" 
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=2670"
                 alt="Collaboration" 
-                width={600} 
-                height={400} 
-                className="rounded-xl shadow-lg"
+                fill
+                className="object-cover"
               />
             </motion.div>
 
@@ -204,6 +204,7 @@ export default function ProtribeContent() {
           </div>
         </div>
       </section>
+    
 
       {/* Our Business Portfolio */}
       <section className="py-20">

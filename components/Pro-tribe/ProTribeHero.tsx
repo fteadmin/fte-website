@@ -16,7 +16,7 @@ export default function ProTribeHero({
   return (
     <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
       {/* Gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#010E2F] via-[#0A2472] to-[#0E6BA8]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#010E2F] via-[#0A2472] to-[#0E6BA8]" />
       
       {/* Pattern overlay */}
       <div className="absolute inset-0 bg-[url('/assets/images/pattern-bg.png')] opacity-10" />

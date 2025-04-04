@@ -101,7 +101,7 @@ export default function BusinessLogos() {
           className="mt-12 text-center"
         >
           <a 
-            href="/ecosystem" 
+            href="/pro-tribe" 
             className="inline-block px-8 py-3 border border-white/30 text-white rounded-full hover:bg-white/10 transition-all duration-300"
           >
             Explore Our Full Ecosystem
