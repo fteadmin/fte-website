@@ -62,7 +62,7 @@ export default function ProtribeContent() {
     { 
       name: "Launch Couture", 
       category: "Fashion & Lifestyle", 
-      logoSrc: "/assets/logos/lc.jpg",
+      logoSrc: "/assets/logos/lc.png",
       description: "Blending luxury with accessibility through exclusive fashion collections and styling services."
     },
   ];
