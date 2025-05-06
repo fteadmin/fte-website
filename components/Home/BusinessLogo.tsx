@@ -47,7 +47,7 @@ export default function BusinessLogos() {
     { name: "Sage Hospitality", category: "Lifestyle", logoSrc: "/assets/logos/sage.jpg" },
     { name: "Zariel and Co", category: "Fashion & Lifestyle", logoSrc: "/assets/logos/z.jpg" },
     { name: "Phylos", category: "Health & Wellness", logoSrc: "/assets/logos/phylos.png" },
-    { name: "Nx LVL", category: "Entertainment", logoSrc: "/assets/logos/nx.jpg" },
+    { name: "Nx LVL", category: "Entrepreneurship ", logoSrc: "/assets/logos/nx.jpg" },
     // Updated paths for Good Chef Co and Launch Couture with correct filenames
     { name: "Good Chef Co", category: "Food & Beverage", logoSrc: "/assets/logos/good.png" },
     { name: "Launch Couture", category: "Fashion & Lifestyle", logoSrc: "/assets/logos/lc.png" },
