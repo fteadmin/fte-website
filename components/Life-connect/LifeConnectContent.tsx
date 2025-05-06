@@ -48,17 +48,17 @@ export default function LifeConnectContent() {
       features: ["Mindfulness Programs", "Fitness Classes", "Health Consultations"]
     },
     { 
-      name: "Organic Market", 
+      name: "MaaHarvest", 
       icon: <Utensils className="h-6 w-6 text-blue-600" />,
       description: "Fresh, locally-sourced organic produce and sustainable goods supporting local farmers and artisans.",
       features: ["Farm-to-Table Products", "Zero-Waste Packaging", "Community Supported Agriculture"]
     },
-    { 
-      name: "Eco Tourism", 
-      icon: <Mountain className="h-6 w-6 text-blue-600" />,
-      description: "Immersive nature experiences that educate and inspire while preserving environmental integrity.",
-      features: ["Guided Nature Retreats", "Conservation Projects", "Sustainable Adventure Tours"]
-    },
+    // { 
+    //   name: "Eco Tourism", 
+    //   icon: <Mountain className="h-6 w-6 text-blue-600" />,
+    //   description: "Immersive nature experiences that educate and inspire while preserving environmental integrity.",
+    //   features: ["Guided Nature Retreats", "Conservation Projects", "Sustainable Adventure Tours"]
+    // },
   ];
 
   return (
@@ -151,8 +151,8 @@ export default function LifeConnectContent() {
               className="rounded-xl overflow-hidden shadow-md"
             >
               <Image 
-                src="/assets/images/nature-wellness.jpg" 
-                alt="Nature and Wellness" 
+src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=1000"
+alt="Nature and Wellness" 
                 width={600} 
                 height={400} 
                 className="object-cover w-full h-full"
