@@ -32,7 +32,7 @@ export default function KeyAchievements() {
       value: "15",
       numericValue: 15,
       label: "Incubated Companies",
-      description: "Fifteen companies currently in our incubator been funded, furthering FTE's legacy of fostering entrepreneurship and innovation."
+      description: "Fifteen companies currently in our incubator have been funded, furthering FTE's legacy of fostering entrepreneurship and innovation."
     },
     {
       value: "$420M+",

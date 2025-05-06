@@ -44,9 +44,9 @@ const BusinessLogo = ({ name, logoSrc, category }: BusinessProps) => {
 export default function BusinessLogos() {
   // Actual FTE businesses and verticals with updated logo paths
   const businesses = [
-    { name: "Sage Hospital", category: "Healthcare", logoSrc: "/assets/logos/sage.jpg" },
+    { name: "Sage Hospitality", category: "Lifestyle", logoSrc: "/assets/logos/sage.jpg" },
     { name: "Zariel and Co", category: "Fashion & Lifestyle", logoSrc: "/assets/logos/z.jpg" },
-    { name: "Phylos", category: "Technology", logoSrc: "/assets/logos/phylos.png" },
+    { name: "Phylos", category: "Health & Wellness", logoSrc: "/assets/logos/phylos.png" },
     { name: "Nx LVL", category: "Entertainment", logoSrc: "/assets/logos/nx.jpg" },
     // Updated paths for Good Chef Co and Launch Couture with correct filenames
     { name: "Good Chef Co", category: "Food & Beverage", logoSrc: "/assets/logos/good.png" },

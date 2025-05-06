@@ -141,8 +141,7 @@ export default function WhoWeAre() {
             <div className="p-6 rounded-xl border border-[#010E2F]/10 bg-white shadow-sm">
               <h4 className="text-xl font-semibold text-[#010E2F] mb-3">Excellence</h4>
               <p className="text-gray-600">
-                We are committed to excellence in everything we do, from product development to customer service.
-              </p>
+              We are dedicated to achieving excellence in every facet of our operations, from product development to customer service.</p>
             </div>
           </div>
         </motion.div>
