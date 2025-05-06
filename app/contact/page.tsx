@@ -66,8 +66,8 @@ export default function ContactPage() {
                   <ContactInfo 
                     icon={<Mail className="h-5 w-5 text-blue-600" />}
                     title="Email Address"
-                    content="admin@futuretrends.com"
-                    link="mailto:admin@futuretrends.com"
+                    content="specialists@futuretrendsent.info"
+                    link="mailto:specialists@futuretrendsent.info"
                   />
                   <ContactInfo 
                     icon={<Clock className="h-5 w-5 text-blue-600" />}

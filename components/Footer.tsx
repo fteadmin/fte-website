@@ -95,7 +95,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2 text-white/80">
                 <Mail className="h-5 w-5 flex-shrink-0" />
-                <span>admin@futuretrends.com</span>
+                <span>specialist@futuretrends.info</span>
               </li>
             </ul>
           </motion.div>
