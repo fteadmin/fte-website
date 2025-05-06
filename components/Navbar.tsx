@@ -32,7 +32,7 @@ const proTribeContent = {
 const lifeConnectContent = {
   title: 'Life Connect',
   description: 'At Life Connect, we believe that true fulfillment comes from living in harmony with nature and embracing practices that promote overall well-being.',
-  businesses: ['MaaHarvest', 'Organic Market', 'Eco Tourism']
+  businesses: ['MaaHarvest', 'Entreprenuer lifestyle', 'House Party']
 };
 
 export default function Navbar() {

@@ -12,6 +12,8 @@ import {
   ArrowRight, 
   Activity, 
   Utensils, 
+  Briefcase, 
+  PartyPopper,
   Mountain, 
   Scroll,
   Globe,
@@ -41,18 +43,26 @@ export default function LifeConnectContent() {
 
   // Life Connect areas
   const areas = [
-    { 
-      name: "Wellness Center", 
-      icon: <Activity className="h-6 w-6 text-blue-600" />,
-      description: "A holistic approach to health combining traditional and modern practices for mind-body wellness.",
-      features: ["Mindfulness Programs", "Fitness Classes", "Health Consultations"]
-    },
+   
     { 
       name: "MaaHarvest", 
       icon: <Utensils className="h-6 w-6 text-blue-600" />,
       description: "Fresh, locally-sourced organic produce and sustainable goods supporting local farmers and artisans.",
       features: ["Farm-to-Table Products", "Zero-Waste Packaging", "Community Supported Agriculture"]
-    },
+    }, 
+    { 
+      name: "Entrepreneur Lifestyle", 
+      icon: <Briefcase className="h-6 w-6 text-blue-600" />,
+      description: "Holistic approach to entrepreneurship that balances professional success with personal wellbeing and fulfillment.",
+      features: ["Work-Life Integration", "Mindful Leadership", "Sustainable Business Practices"]
+    }, 
+    { 
+      name: "House Party", 
+      icon: <PartyPopper className="h-6 w-6 text-blue-600" />,
+      description: "Community gatherings that foster authentic connections through shared experiences in welcoming spaces.",
+      features: ["Themed Social Events", "Networking Opportunities", "Cultural Celebrations"]
+    }
+
     // { 
     //   name: "Eco Tourism", 
     //   icon: <Mountain className="h-6 w-6 text-blue-600" />,
