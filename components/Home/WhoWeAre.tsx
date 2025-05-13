@@ -65,17 +65,17 @@ export default function WhoWeAre() {
             </div>
           </div>
           
-          {/* Life Connect Section */}
+          {/* Life Connect Section - Updated with actual logo */}
           <div className="flex flex-col md:flex-row-reverse gap-8 items-center">
             <div className="w-full md:w-2/5 flex justify-center">
               <div className="bg-[#010E2F]/5 rounded-xl p-8 flex items-center justify-center h-60 w-full md:w-80">
-                {/* Placeholder for Life Connect logo - enhanced version */}
-                <div className="flex flex-col items-center gap-3">
-                  <div className="w-16 h-16 bg-gradient-to-r from-[#0A2472] to-[#0E6BA8] rounded-full flex items-center justify-center">
-                    <Leaf className="h-10 w-10 text-white" />
-                  </div>
-                  <span className="text-2xl font-bold text-[#010E2F]">Life Connect</span>
-                </div>
+                <Image 
+                  src="/assets/logos/lifec.png" 
+                  alt="Life Connect Logo" 
+                  width={300} 
+                  height={120} 
+                  className="w-full max-w-[250px] h-auto object-contain"
+                />
               </div>
             </div>
             <div className="w-full md:w-3/5">

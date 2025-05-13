@@ -7,10 +7,9 @@ import Image from 'next/image';
 interface BusinessProps {
   name: string;
   logoSrc?: string;
-  category: string;
 }
 
-const BusinessLogo = ({ name, logoSrc, category }: BusinessProps) => {
+const BusinessLogo = ({ name, logoSrc }: BusinessProps) => {
   const [imageError, setImageError] = useState(false);
 
   return (
@@ -23,8 +22,6 @@ const BusinessLogo = ({ name, logoSrc, category }: BusinessProps) => {
             width={120} 
             height={80} 
             className="object-contain h-16 w-auto"
-            // Remove filters that might make logos invisible
-            // filter brightness-0 invert opacity-80 hover:opacity-100
             onError={() => setImageError(true)}
           />
         </div>
@@ -36,7 +33,6 @@ const BusinessLogo = ({ name, logoSrc, category }: BusinessProps) => {
         </div>
       )}
       <h3 className="text-white font-medium text-center">{name}</h3>
-      <p className="text-xs text-white/70 mt-1">{category}</p>
     </div>
   );
 };
@@ -45,10 +41,9 @@ export default function BusinessLogos() {
   // Actual FTE businesses and verticals with updated logo paths
   const businesses = [
     { name: "Sage Hospitality", logoSrc: "/assets/logos/sage.jpg" },
-    { name: "Zariel and Co",  logoSrc: "/assets/logos/z.jpg" },
+    { name: "Zariel and Co", logoSrc: "/assets/logos/z.jpg" },
     { name: "Phylos", logoSrc: "/assets/logos/phylos.png" },
     { name: "Nx LVL", logoSrc: "/assets/logos/nx.jpg" },
-    // Updated paths for Good Chef Co and Launch Couture with correct filenames
     { name: "Good Chef Co", logoSrc: "/assets/logos/good.png" },
     { name: "Launch Couture", logoSrc: "/assets/logos/lc.png" },
   ];
@@ -86,7 +81,6 @@ export default function BusinessLogos() {
             >
               <BusinessLogo 
                 name={business.name} 
-                category={business.category} 
                 logoSrc={business.logoSrc} 
               />
             </motion.div>

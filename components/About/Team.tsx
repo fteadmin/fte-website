@@ -10,13 +10,13 @@ export default function Team() {
       name: "Ben Larkpor",
       role: "Founder and CEO",
       bio: "Visionary leader with a passion for bridging technology and social impact. Ben founded Future Trends Enterprise to create innovative ecosystems that empower communities and businesses.",
-      image: "/assets/team/ben.png" // Update with actual image path
+      image: "/assets/team/ben.jpeg" // Update with actual image path
     },
     {
       name: "Alfonzo Spigner",
       role: "Chief Creative Officer (CCO)",
       bio: "Leads FTE's creative vision, brand identity, and innovation strategies. Alfonzo oversees design, marketing, content, and product aesthetics to ensure consistency and engagement across all platforms.",
-      image: "/assets/team/img-3.jpg" // Update with actual image path
+      image: "/assets/team/alf.jpg" // Update with actual image path
     },
     {
       name: "Kevin Crawford",
@@ -28,19 +28,19 @@ export default function Team() {
       name: "Timothy Neal",
       role: "Community Relations Director",
       bio: "Timothy Neal excels in fostering meaningful connections between FTE and the communities it serves. He leads outreach initiatives, builds strategic partnerships, and advocates for inclusivity and economic empowerment.",
-      image: "/assets/team/img-3.jpg" // Update with actual image path
+      image: "/assets/team/tim.jpg" // Update with actual image path
     },
     {
       name: "Carmelle Neal",
       role: "Community Relations Director",
       bio: "Carmelle has over a decade of experience in community outreach initiatives. With a passion for relationship-building, Carmelle ensures FTE remains engaged with its members, stakeholders, and broader networks, strengthening its impact and community-driven mission.",
-      image: "/assets/team/img-3.jpg"
+      image: "/assets/team/car.jpg"
     },
     {
       name: "Mimi Aremu",
       role: "Risk Strategy Advisor",
       bio: "Specializing in identifying, assessing, and mitigating risks that impact business growth and sustainability. Mimi develops strategic frameworks to safeguard operations, ensuring compliance, financial stability, and resilience against market uncertainties.",
-      image: "/assets/team/img-3.jpg"
+      image: "/assets/team/mimi.jpeg"
     },
   ];
 
