@@ -21,7 +21,7 @@ const proTribeContent = {
   description: 'At Pro Tribe, we believe in the power of collaboration, where every dollar spent within our community circulates back to fuel the growth of our members.',
   businesses: [
     'Good Chef Co', 
-    'Sage Hospital', 
+    'Sage Hospitality', 
     'Zariel and Co', 
     'Phylos', 
     'Nx LVL', 
