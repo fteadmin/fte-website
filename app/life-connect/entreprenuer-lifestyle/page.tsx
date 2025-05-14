@@ -1,8 +1,11 @@
 import BusinessPage from '@/components/BusinessPage';
+import EntrepreneurLifestyle from '@/components/Entrelife/Entreprenuerlifestyle';
 
 export default function EntreprenuerLifestylePage() {
   return (
-    <BusinessPage
+    <>
+   
+     <BusinessPage
       name="Entrepreneur Lifestyle"
       description="Entrepreneur Lifestyle is a holistic platform dedicated to helping business leaders thrive professionally and personally. We blend cutting-edge business strategies with wellness practices that promote sustainable success. Our approach focuses on work-life integration, mindful leadership, and creating businesses that generate positive impact while maintaining founder wellbeing."
       logo="/assets/logos/el.jpg"
@@ -19,5 +22,9 @@ export default function EntreprenuerLifestylePage() {
         address: "456 Innovation Drive, Suite 200, San Francisco, CA 94107"
       }}
     />
+     <EntrepreneurLifestyle />
+    
+    </>
+   
   );
 }
