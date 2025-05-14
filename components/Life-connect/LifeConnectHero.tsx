@@ -12,7 +12,7 @@ interface LifeConnectHeroProps {
 
 export default function LifeConnectHero({ 
   title = "Life Connect",
-  subtitle = "At Life Connect, we believe that true fulfillment comes from living in harmony with nature and embracing practices that promote overall well-being."
+  subtitle = "Our social engine platform focused on community building and increasing exposure for our partners."
 }: LifeConnectHeroProps) {
   return (
     <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
@@ -44,7 +44,7 @@ export default function LifeConnectHero({
             </p>
           </motion.div>
           
-          {/* Logo Display - consistent with ProTribe */}
+          {/* Logo Display - updated to use actual logo */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -52,10 +52,14 @@ export default function LifeConnectHero({
             className="lg:w-1/3 flex justify-center"
           >
             <div className="w-48 h-48 md:w-56 md:h-56 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center p-6 shadow-lg">
-              {/* Logo with blue tones instead of green */}
-              <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-full p-4 flex items-center justify-center">
-                <Leaf className="w-20 h-20 md:w-24 md:h-24 text-white" />
-              </div>
+              {/* Replaced Leaf icon with actual Life Connect logo */}
+              <Image 
+                src="/assets/logos/lifec.png"
+                alt="Life Connect Logo" 
+                width={180} 
+                height={180} 
+                className="object-contain"
+              />
             </div>
           </motion.div>
         </div>
