@@ -1,8 +1,10 @@
 import BusinessPage from '@/components/BusinessPage';
+import LevelUpContent from '@/components/Pro-tribe/LevelUpContent';
 
 export default function NxLvlPage() {
   return (
-    <BusinessPage
+    <>
+     <BusinessPage
       name="Nx LVL"
       description="Nx LVL is a premier fitness and wellness company dedicated to helping individuals and organizations achieve their peak performance potential. We combine cutting-edge exercise science with personalized coaching to deliver transformative fitness experiences. Our comprehensive approach encompasses physical training, nutrition guidance, and mental wellness strategies, ensuring holistic development for our clients."
       logo = "/assets/logos/nx.jpg"
@@ -19,5 +21,10 @@ export default function NxLvlPage() {
         address: "321 Fitness Way, Wellness District, WD 89012"
       }}
     />
+    <LevelUpContent />
+    
+    
+    </>
+   
   );
 }

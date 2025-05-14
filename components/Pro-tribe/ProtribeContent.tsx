@@ -30,7 +30,7 @@ export default function ProtribeContent() {
   // Pro Tribe businesses
   const businesses = [
     { 
-      name: "Sage Hospital", 
+      name: "Sage Hospitality", 
       category: "Healthcare", 
       logoSrc: "/assets/logos/sage.jpg",
       description: "Pioneering accessible healthcare solutions with innovative technology and patient-centered approaches."
@@ -363,7 +363,7 @@ export default function ProtribeContent() {
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-xl font-bold mr-4">S</div>
                 <div>
-                  <h3 className="text-xl font-bold text-[#010E2F]">Sage Hospital</h3>
+                  <h3 className="text-xl font-bold text-[#010E2F]">Sage Hospitality</h3>
                   <p className="text-gray-600">Healthcare Innovation</p>
                 </div>
               </div>
