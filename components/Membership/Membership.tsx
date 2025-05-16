@@ -30,7 +30,7 @@ const tiers = [
     highlightColor: 'blue-500',
     borderColor: 'border-blue-200',
     limitedOffer: true,
-    link: '/' // Custom link for Entrepreneur tier
+    link: 'https://751e3102-2fdb-41f7-bf0a-209cb1a5fdc9.paylinks.godaddy.com/59f1c2b8-1c7e-45dd-a911-99e' // Custom link for Entrepreneur tier
   },
   {
     name: 'Investor',
