@@ -84,9 +84,20 @@ export default function Membership() {
     setIsLoading(true);
     setSelectedTier(tier.name);
     
-    // Short timeout to show loading state before navigating
+    // Short timeout to show loading state before opening the link
     setTimeout(() => {
-      router.push(tier.link);
+      // Check if the link is external (starts with http or https)
+      if (tier.link.startsWith('http')) {
+        // Open external links in a new tab
+        window.open(tier.link, '_blank');
+      } else {
+        // Use router for internal links
+        router.push(tier.link);
+      }
+      
+      // Reset loading state after navigation
+      setIsLoading(false);
+      setSelectedTier(null);
     }, 500);
   };
 
