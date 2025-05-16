@@ -29,7 +29,7 @@ const tiers = [
     highlightColor: 'blue-500',
     borderColor: 'border-blue-200',
     limitedOffer: true,
-    link: 'https://pay.goodchefco.com/09f9ae0f-839b-4a0a-a180-12c' // Custom link for Entrepreneur tier
+    link: '/' // Custom link for Entrepreneur tier
   },
   {
     name: 'Investor',
