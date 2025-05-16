@@ -15,6 +15,7 @@ const tiers = [
   {
     name: 'Entrepreneur',
     price: 75,
+    originalPrice: 2500, // Added original price
     description: 'Unlock Your Limitless Potential',
     icon: Sparkles,
     features: [
@@ -259,8 +260,18 @@ export default function Membership() {
                 <p className="text-blue-200 mb-6 h-14">{tier.description}</p>
                 
                 <div className="flex items-baseline mb-8">
-                  <span className="text-5xl font-bold text-white">${tier.price}</span>
-                  {/* <span className="text-blue-200 ml-2">/month</span> */}
+                  {/* Modified price display for Entrepreneur tier */}
+                  {tier.name === 'Entrepreneur' ? (
+                    <div className="flex items-center flex-wrap">
+                      <span className="text-5xl font-bold text-white">${tier.price}</span>
+                      <span className="ml-3 line-through text-gray-400 text-xl">${tier.originalPrice}</span>
+                      <span className="ml-3 bg-blue-500 text-white text-xs px-2 py-1 rounded-full">
+                        97% OFF
+                      </span>
+                    </div>
+                  ) : (
+                    <span className="text-5xl font-bold text-white">${tier.price}</span>
+                  )}
                 </div>
                 
                 {/* Features */}
