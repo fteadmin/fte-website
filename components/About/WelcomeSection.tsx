@@ -39,7 +39,7 @@ export default function WelcomeSection() {
               {/* Explore Memberships Button */}
               <div className="pt-6">
                 <Link 
-                  href="/memberships"
+                  href="/membership"
                   className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full inline-flex items-center transition-colors duration-300"
                 >
                   Explore Memberships

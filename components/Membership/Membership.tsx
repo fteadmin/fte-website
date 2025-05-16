@@ -7,6 +7,7 @@ import Countdown from 'react-countdown';
 import { useState } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
 
@@ -27,7 +28,8 @@ const tiers = [
     color: 'from-blue-500 to-blue-700',
     highlightColor: 'blue-500',
     borderColor: 'border-blue-200',
-    limitedOffer: true
+    limitedOffer: true,
+    link: 'https://pay.goodchefco.com/09f9ae0f-839b-4a0a-a180-12c' // Custom link for Entrepreneur tier
   },
   {
     name: 'Investor',
@@ -45,7 +47,8 @@ const tiers = [
     popular: true,
     color: 'from-purple-600 to-blue-600',
     highlightColor: 'purple-500',
-    borderColor: 'border-purple-200'
+    borderColor: 'border-purple-200',
+    link: '/investor-application' // Custom link for Investor tier
   },
   {
     name: 'Visionary',
@@ -62,7 +65,8 @@ const tiers = [
     ],
     color: 'from-blue-700 to-indigo-900',
     highlightColor: 'blue-700',
-    borderColor: 'border-blue-300'
+    borderColor: 'border-blue-300',
+    link: '/visionary-consultation' // Custom link for Visionary tier
   }
 ];
 
@@ -70,9 +74,22 @@ const tiers = [
 const countdownDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
 
 export default function Membership() {
+  const router = useRouter();
   const [selectedTier, setSelectedTier] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
+  // New function to handle navigation to different pages based on tier
+  const handleTierSelection = (tier: typeof tiers[0]) => {
+    setIsLoading(true);
+    setSelectedTier(tier.name);
+    
+    // Short timeout to show loading state before navigating
+    setTimeout(() => {
+      router.push(tier.link);
+    }, 500);
+  };
+
+  // Original Stripe checkout function (keeping it in case you need it for some tiers)
   const handleSubscribe = async (tierName: string) => {
     try {
       setIsLoading(true);
@@ -256,9 +273,9 @@ export default function Membership() {
                   ))}
                 </ul>
                 
-                {/* Button */}
+                {/* Button - Now using the custom link for each tier */}
                 <Button
-                  onClick={() => handleSubscribe(tier.name)}
+                  onClick={() => handleTierSelection(tier)}
                   disabled={isLoading || selectedTier === tier.name}
                   className={`w-full bg-gradient-to-r ${tier.color} text-white py-6 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 flex items-center justify-center`}
                 >
