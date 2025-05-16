@@ -6,19 +6,7 @@ export default function MaaharvestPage() {
     <>
       <BusinessPage
         name="MaaHarvest"
-        description={
-          <>
-            Maa Harvest is a soul-nourishing culinary experience that unites communities through seasonal, chef-led 
-            gatherings. As a signature activation of Good Chef Co within the Pro Tribe ecosystem, we celebrate 
-            farm-to-table authenticity while rebuilding connections to land, heritage, and conscious living.
-            <a 
-              href="#maaharvest-content" 
-              className="text-blue-600 font-medium hover:underline ml-2"
-            >
-              Read more
-            </a>
-          </>
-        }
+        description="Maa Harvest is a soul-nourishing culinary experience that unites communities through seasonal, chef-led gatherings. As a signature activation of Good Chef Co within the Pro Tribe ecosystem, we celebrate farm-to-table authenticity while rebuilding connections to land, heritage, and conscious living."
         logo="/assets/logos/mah.jpg"
         website="https://maaharvest.com"
         social={{

@@ -6,19 +6,7 @@ export default function EntreprenuerLifestylePage() {
     <>
       <BusinessPage
         name="Entrepreneur Lifestyle"
-        description={
-          <>
-            Entrepreneur Lifestyle is dedicated to bridging the gap between business success and personal fulfillment. 
-            We create content that inspires and educates entrepreneurs on achieving sustainable growth while 
-            maintaining balance and wellbeing. 
-            <a 
-              href="#entrepreneur-content" 
-              className="text-blue-600 font-medium hover:underline ml-2"
-            >
-              Read more
-            </a>
-          </>
-        }
+        description="Entrepreneur Lifestyle is dedicated to bridging the gap between business success and personal fulfillment. We create content that inspires and educates entrepreneurs on achieving sustainable growth while maintaining balance and wellbeing."
         logo="/assets/logos/el.jpg"
         website="https://entrepreneurlifestyle.com"
         social={{
