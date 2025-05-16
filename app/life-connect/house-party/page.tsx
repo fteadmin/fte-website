@@ -6,7 +6,19 @@ export default function HousePartyPage() {
     <>
      <BusinessPage
       name="House Party"
-      description="House Party creates vibrant community gatherings that foster genuine connections through shared experiences. Our curated events blend entertainment, culture, and networking in welcoming spaces where people feel valued and inspired. From themed social events to cultural celebrations, we bring diverse groups together to create memorable experiences that strengthen community bonds."
+      description={
+        <>
+          House Party is the vibrant social engine behind Sage Hospitality and Lifestyle Concierge, blending real estate 
+          expertise with community engagement. We transform residential and commercial property experiences into 
+          meaningful connections through curated gatherings that make real estate personal and community-centered.
+          <a 
+            href="#houseparty-content" 
+            className="text-blue-600 font-medium hover:underline ml-2"
+          >
+            Read more
+          </a>
+        </>
+      }
       logo="/assets/logos/hp.jpg"
       website="https://housepartyevents.com"
       social={{
@@ -21,7 +33,9 @@ export default function HousePartyPage() {
         address: "789 Community Plaza, Suite 300, Los Angeles, CA 90012"
       }}
     />
-      <HousePartyContent />
+      <div id="houseparty-content">
+        <HousePartyContent />
+      </div>
     </>
    
   );
