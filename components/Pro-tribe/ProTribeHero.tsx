@@ -11,7 +11,7 @@ interface ProTribeHeroProps {
 
 export default function ProTribeHero({ 
   title = "Pro Tribe Ecosystem", 
-  subtitle = "A comprehensive business incubator that builds new ventures, collaborates with existing businesses, and provides growth solutions through our extensive networks and resources."
+  subtitle = "A dynamic, interconnected network designed to build, scale, and sustain ventures through a holistic approach that integrates information, data, community, support, and technology."
 }: ProTribeHeroProps) {
   return (
     <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
