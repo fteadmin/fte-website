@@ -18,7 +18,6 @@ import { useState, useEffect } from 'react';
 
 const proTribeContent = {
   title: 'Pro Tribe',
-  description: 'At Pro Tribe, we believe in the power of collaboration, where every dollar spent within our community circulates back to fuel the growth of our members.',
   businesses: [
     'Good Chef Co', 
     'Sage Hospitality', 
@@ -31,7 +30,6 @@ const proTribeContent = {
 
 const lifeConnectContent = {
   title: 'Life Connect',
-  description: 'At Life Connect, we believe that true fulfillment comes from living in harmony with nature and embracing practices that promote overall well-being.',
   businesses: ['MaaHarvest', 'Entreprenuer lifestyle', 'House Party']
 };
 
@@ -148,7 +146,6 @@ export default function Navbar() {
                         <Building2 className="h-5 w-5" />
                         <div className="text-sm font-medium">{proTribeContent.title}</div>
                       </div>
-                      <p className="text-sm text-white/70 mt-2">{proTribeContent.description}</p>
                       
                       {/* Pro Tribe main page link */}
                       <Link
@@ -181,7 +178,6 @@ export default function Navbar() {
                         <Leaf className="h-5 w-5" />
                         <div className="text-sm font-medium">{lifeConnectContent.title}</div>
                       </div>
-                      <p className="text-sm text-white/70 mt-2">{lifeConnectContent.description}</p>
                       
                       {/* Life Connect main page link */}
                       <Link
