@@ -1,23 +1,30 @@
 import BusinessPage from '@/components/BusinessPage';
+import SageHospitalityContent from '@/components/Pro-tribe/SageHospitalityContent';
 
-export default function SageHospitalPage() {
+export default function SageHospitalityPage() {
   return (
-    <BusinessPage
-      name="Sage Hospital"
-      description="Sage Hospital is a pioneering healthcare institution committed to providing innovative, patient-centered care through the integration of cutting-edge technology and compassionate medical services. Our state-of-the-art facilities and expert medical staff work together to deliver exceptional healthcare outcomes while maintaining the highest standards of patient comfort and satisfaction. We specialize in both traditional and innovative medical treatments, offering comprehensive care across multiple specialties."
-      logo = "/assets/logos/sage.jpg"
-      website="https://sagehospital.com"
-      social={{
-        facebook: "https://facebook.com/sagehospital",
-        twitter: "https://twitter.com/sagehospital",
-        linkedin: "https://linkedin.com/company/sagehospital",
-        instagram: "https://instagram.com/sagehospital"
-      }}
-      contact={{
-        email: "info@sagehospital.com",
-        phone: "(555) 123-4567",
-        address: "789 Healthcare Avenue, Medical District, MD 12345"
-      }}
-    />
+    <>
+      <BusinessPage
+        name="Sage Hospitality and Concierge"
+        description="Sage Hospitality and Concierge provides comprehensive real estate solutions spanning residential properties, commercial investments, and premium concierge services. We guide clients through every step of their real estate journey with personalized support and expert insights."
+        logo="/assets/logos/sage.jpg"
+        website="https://sagehospitality.com"
+        social={{
+          facebook: "https://facebook.com/sagehospitality",
+          twitter: "https://twitter.com/sagehospitality",
+          linkedin: "https://linkedin.com/company/sagehospitality",
+          instagram: "https://instagram.com/sagehospitality"
+        }}
+        contact={{
+          email: "info@sagehospitality.com",
+          phone: "(555) 345-6789",
+          address: "789 Concierge Boulevard, Hospitality District, HD 78901"
+        }}
+      />
+      
+      <div id="sage-hospitality-content">
+        <SageHospitalityContent />
+      </div>
+    </>
   );
 }
