@@ -32,12 +32,7 @@ export default function GoodChefCoContent() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-16"
           >
-            <p className="text-lg text-gray-700 max-w-4xl mx-auto">
-              Good Chef Co represents the future of culinary entrepreneurship, offering a groundbreaking platform that unites 
-              ambitious chefs with passionate food enthusiasts. Our innovative dual-market solution combines a comprehensive 
-              chef incubator program with an exclusive membership-based dining community, creating unprecedented opportunities 
-              for culinary innovation and exceptional dining experiences.
-            </p>
+          
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">

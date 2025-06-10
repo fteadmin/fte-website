@@ -1,23 +1,31 @@
 import BusinessPage from '@/components/BusinessPage';
+import PhylosContent from '@/components/Pro-tribe/PhylosContent';
 
 export default function PhylosPage() {
   return (
-    <BusinessPage
-      name="Phylos"
-      description="Phylos is a cutting-edge technology company specializing in sustainable solutions and environmental innovation. Our mission is to develop and implement advanced technologies that address global environmental challenges while promoting sustainable business practices. Through our innovative products and services, we help organizations reduce their environmental impact while maintaining operational efficiency and profitability."
-      logo = "/assets/logos/phylos.png"
-      website="https://phylos.tech"
-      social={{
-        facebook: "https://facebook.com/phylostech",
-        twitter: "https://twitter.com/phylostech",
-        linkedin: "https://linkedin.com/company/phylos",
-        instagram: "https://instagram.com/phylostech"
-      }}
-      contact={{
-        email: "info@phylos.tech",
-        phone: "(555) 345-6789",
-        address: "123 Tech Park Way, Innovation Valley, IV 34567"
-      }}
-    />
+    <>
+      <BusinessPage
+        name="Phylos"
+        description="Phylos is a dynamic platform that helps Our platform helps you unlock the deeper meaning in movement for athletics, wellness, and beauty."
+        logo="/assets/logos/phylos.png"
+        // https://nxnlvl.com
+        website="https://phyloswisdom.com"
+        social={{
+          facebook: "https://facebook.com/phylos",
+          twitter: "https://twitter.com/phylos",
+          linkedin: "https://linkedin.com/company/phylos",
+          instagram: "https://instagram.com/phylos"
+        }}
+        contact={{
+          email: "info@phylos.com",
+          phone: "(555) 456-7890",
+          address: "789 Movement Ave, Wellness District, WD 56789"
+        }}
+      />
+      
+      <div id="phylos-content">
+        <PhylosContent />
+      </div>
+    </>
   );
 }

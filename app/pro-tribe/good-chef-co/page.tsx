@@ -6,7 +6,9 @@ export default function GoodChefCoPage() {
     <>
       <BusinessPage
         name="Good Chef Co"
-        description="Good Chef Co represents the future of culinary entrepreneurship, offering a groundbreaking platform that unites ambitious chefs with passionate food enthusiasts. Our innovative dual-market solution combines a comprehensive chef incubator program with an exclusive membership-based dining community."
+        description="Good Chef Co represents the future of culinary entrepreneurship, offering a groundbreaking platform that unites ambitious chefs with passionate food enthusiasts. Our innovative dual-market solution combines a comprehensive chef incubator program with an exclusive membership-based dining community, creating unprecedented opportunities for culinary innovation and exceptional dining experiences.
+
+"
         logo="/assets/logos/good.png"
         website="https://goodchefco.com"
         social={{

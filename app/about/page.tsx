@@ -31,11 +31,11 @@ export default function AboutPage() {
           </p>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-            <StatisticCard 
+            {/* <StatisticCard 
               value="15M+" 
               label="Annual Revenue" 
               description="With a revenue stream of 15 million, the company showcases strong financial health and growth."
-            />
+            /> */}
             
             <StatisticCard 
               value="2+" 
@@ -49,11 +49,11 @@ export default function AboutPage() {
               description="Fifteen companies currently in our incubator been funded, furthering FTE's legacy of fostering entrepreneurship and innovation."
             />
             
-            <StatisticCard 
+            {/* <StatisticCard 
               value="$420M+" 
               label="Company Evaluation" 
               description="Evaluated at an impressive $420 million, Future Trends Enterprise has established itself as a significant player in community development."
-            />
+            /> */}
           </div>
         </div>
       </section>

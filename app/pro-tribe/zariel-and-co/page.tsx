@@ -8,7 +8,7 @@ export default function ZarielAndCoPage() {
       name="Zariel and Co"
       description="Zariel and Co is a forward-thinking consulting firm that specializes in business transformation and strategic innovation. We partner with organizations to navigate complex challenges and capitalize on emerging opportunities in today's rapidly evolving business landscape. Our team of experienced consultants brings diverse expertise across industries, helping clients achieve sustainable growth through data-driven insights and customized solutions."
       logo = "/assets/logos/z.jpg"
-      website="https://zarielandco.com"
+      website="https://zaniyazariel.com"
       social={{
         facebook: "https://facebook.com/zarielandco",
         twitter: "https://twitter.com/zarielandco",

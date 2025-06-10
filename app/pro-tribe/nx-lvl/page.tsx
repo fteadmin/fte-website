@@ -8,7 +8,7 @@ export default function NxLvlPage() {
       name="Nx LVL"
       description="Nx LVL is a premier fitness and wellness company dedicated to helping individuals and organizations achieve their peak performance potential. We combine cutting-edge exercise science with personalized coaching to deliver transformative fitness experiences. Our comprehensive approach encompasses physical training, nutrition guidance, and mental wellness strategies, ensuring holistic development for our clients."
       logo = "/assets/logos/nx.jpg"
-      website="https://nxlvl.fitness"
+      website="https://nxnlvl.com"
       social={{
         facebook: "https://facebook.com/nxlvlfitness",
         twitter: "https://twitter.com/nxlvlfitness",
