@@ -14,8 +14,8 @@ const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!
 const tiers = [
   {
     name: 'Entrepreneur',
-    price: 75,
-    originalPrice: 2500, // Added original price
+    price: 125,
+    originalPrice: 2500,
     description: 'Unlock Your Limitless Potential',
     icon: Sparkles,
     features: [
@@ -30,11 +30,12 @@ const tiers = [
     highlightColor: 'blue-500',
     borderColor: 'border-blue-200',
     limitedOffer: true,
-    link: 'https://751e3102-2fdb-41f7-bf0a-209cb1a5fdc9.paylinks.godaddy.com/59f1c2b8-1c7e-45dd-a911-99e' // Custom link for Entrepreneur tier
+    link: 'https://751e3102-2fdb-41f7-bf0a-209cb1a5fdc9.paylinks.godaddy.com/59f1c2b8-1c7e-45dd-a911-99e'
   },
   {
     name: 'Investor',
-    price: 5000,
+    price: 2500,
+    originalPrice: 5000, // Added originalPrice to show discount
     description: 'Access Funding Opportunities',
     icon: Building2,
     features: [
@@ -46,14 +47,15 @@ const tiers = [
       'Priority Support'
     ],
     popular: true,
+    limitedOffer: true, // Added to show limited time offer badge
     color: 'from-purple-600 to-blue-600',
     highlightColor: 'purple-500',
     borderColor: 'border-purple-200',
-    link: '/investor-application' // Custom link for Investor tier
+    link: '/investor-application'
   },
   {
     name: 'Visionary',
-    price: 25000,
+    price: 'Contact us for a quote',
     description: 'Build a Legacy',
     icon: Crown,
     features: [
@@ -67,12 +69,12 @@ const tiers = [
     color: 'from-blue-700 to-indigo-900',
     highlightColor: 'blue-700',
     borderColor: 'border-blue-300',
-    link: '/visionary-consultation' // Custom link for Visionary tier
+    link: '/contact-us'
   }
 ];
 
-// Set countdown date to 7 days from now
-const countdownDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
+// Set countdown date to June 24, 2025 (7 days from June 17, 2025)
+const countdownDate = new Date('2025-06-24T00:00:00');
 
 export default function Membership() {
   const router = useRouter();
@@ -250,7 +252,7 @@ export default function Membership() {
               )}
               
               {/* Limited Time Offer badge */}
-              {tier.limitedOffer && (
+              {tier.limitedOffer && !tier.popular && (
                 <div className="absolute top-0 right-0">
                   <div className="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-6 py-1 rounded-bl-lg text-sm font-medium shadow-lg">
                     Limited Time Offer
@@ -277,11 +279,21 @@ export default function Membership() {
                       <span className="text-5xl font-bold text-white">${tier.price}</span>
                       <span className="ml-3 line-through text-gray-400 text-xl">${tier.originalPrice}</span>
                       <span className="ml-3 bg-blue-500 text-white text-xs px-2 py-1 rounded-full">
-                        97% OFF
+                        95% OFF
                       </span>
                     </div>
-                  ) : (
+                  ) : tier.name === 'Investor' ? (
+                    <div className="flex items-center flex-wrap">
+                      <span className="text-5xl font-bold text-white">${tier.price}</span>
+                      <span className="ml-3 line-through text-gray-400 text-xl">${tier.originalPrice}</span>
+                      <span className="ml-3 bg-purple-500 text-white text-xs px-2 py-1 rounded-full">
+                        50% OFF
+                      </span>
+                    </div>
+                  ) : typeof tier.price === 'number' ? (
                     <span className="text-5xl font-bold text-white">${tier.price}</span>
+                  ) : (
+                    <span className="text-3xl font-bold text-white">{tier.price}</span>
                   )}
                 </div>
                 
@@ -308,7 +320,7 @@ export default function Membership() {
                     </div>
                   ) : (
                     <div className="flex items-center">
-                      Get Started
+                      {tier.name === 'Visionary' ? 'Contact Us' : 'Get Started'}
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </div>
                   )}

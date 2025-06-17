@@ -2,11 +2,16 @@
 
 import { motion } from 'framer-motion';
 
-interface MembershipHeroProps {
-  scrollToPlans: () => void;
-}
-
-export default function MembershipHero({ scrollToPlans }: MembershipHeroProps) {
+export default function MembershipHero() {
+  // Define the scrollToPlans function locally inside the component
+  const scrollToPlans = () => {
+    // Find the element with id "membership-plans"
+    const plansElement = document.getElementById('membership-plans');
+    if (plansElement) {
+      plansElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
   return (
     <section className="relative bg-gradient-to-br from-[#010E2F] via-[#0A2472] to-[#0E6BA8] text-white overflow-hidden">
       {/* Background elements - matching AboutHero styling */}
@@ -72,6 +77,17 @@ export default function MembershipHero({ scrollToPlans }: MembershipHeroProps) {
               </div>
             </div>
           </motion.div>
+          
+          {/* Added button to scroll to plans */}
+          <motion.button
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.6 }}
+            onClick={scrollToPlans}
+            className="mt-8 bg-white text-blue-900 px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition-colors"
+          >
+            View Membership Plans
+          </motion.button>
         </div>
       </div>
       
