@@ -14,7 +14,7 @@ export default function MembershipHero() {
   
   return (
     <section className="relative bg-gradient-to-br from-[#010E2F] via-[#0A2472] to-[#0E6BA8] text-white overflow-hidden">
-      {/* Background elements - matching AboutHero styling */}
+      {/* Background elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%)]" />
         <motion.div
@@ -32,7 +32,7 @@ export default function MembershipHero() {
         />
       </div>
       
-      {/* Content - following AboutHero structure */}
+      {/* Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative z-10">
         <div className="max-w-3xl">
           <motion.h1
@@ -69,7 +69,7 @@ export default function MembershipHero() {
               </div>
               <div className="flex items-center">
                 <div className="w-3 h-3 bg-blue-300 rounded-full mr-2"></div>
-                <span>Conglomerate</span>
+                <span>Visionary</span>
               </div>
               <div className="flex items-center">
                 <div className="w-3 h-3 bg-blue-300 rounded-full mr-2"></div>
@@ -78,7 +78,7 @@ export default function MembershipHero() {
             </div>
           </motion.div>
           
-          {/* Added button to scroll to plans */}
+          {/* Button to scroll to plans */}
           <motion.button
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

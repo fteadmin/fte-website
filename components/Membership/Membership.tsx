@@ -30,12 +30,12 @@ const tiers = [
     highlightColor: 'blue-500',
     borderColor: 'border-blue-200',
     limitedOffer: true,
-    link: 'https://751e3102-2fdb-41f7-bf0a-209cb1a5fdc9.paylinks.godaddy.com/59f1c2b8-1c7e-45dd-a911-99e'
+    link: 'https://751e3102-2fdb-41f7-bf0a-209cb1a5fdc9.paylinks.godaddy.com/09f9ae0f-839b-4a0a-a180-12c'
   },
   {
     name: 'Investor',
     price: 2500,
-    originalPrice: 5000, // Added originalPrice to show discount
+    originalPrice: 5000,
     description: 'Access Funding Opportunities',
     icon: Building2,
     features: [
@@ -47,11 +47,12 @@ const tiers = [
       'Priority Support'
     ],
     popular: true,
-    limitedOffer: true, // Added to show limited time offer badge
+    limitedOffer: true,
     color: 'from-purple-600 to-blue-600',
     highlightColor: 'purple-500',
     borderColor: 'border-purple-200',
-    link: '/investor-application'
+    // Changed from '/investor-application' to a direct GoDaddy payment link
+    link: 'https://751e3102-2fdb-41f7-bf0a-209cb1a5fdc9.paylinks.godaddy.com/3031daf8-0bba-4f06-b444-e57'
   },
   {
     name: 'Visionary',

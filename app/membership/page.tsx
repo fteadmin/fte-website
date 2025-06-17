@@ -15,8 +15,9 @@ export default function MembershipPage() {
   
   return (
     <>
-      <MembershipHero scrollToPlans={scrollToPlans} />
-      <div ref={plansRef}>
+      {/* Remove the scrollToPlans prop */}
+      <MembershipHero />
+      <div id="membership-plans" ref={plansRef}>
         <Membership />
       </div>
     </>
