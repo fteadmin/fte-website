@@ -33,9 +33,10 @@ const tiers = [
     link: 'https://751e3102-2fdb-41f7-bf0a-209cb1a5fdc9.paylinks.godaddy.com/09f9ae0f-839b-4a0a-a180-12c'
   },
   {
-    name: '100 Strong Community',
+    name: '100 Strong',
     price: 250,
-    description: 'Fast-track offer to establishing a high-yield portfolio within the FTE ecosystem',
+    // Shortened description that's clearer and more concise
+    description: 'Fast-track to a high-yield FTE portfolio',
     icon: Users,
     features: [
       'Custom Package for 100 Strong Community',
@@ -219,7 +220,7 @@ export default function Membership() {
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                <p className="text-blue-200 mb-6 h-14">{tier.description}</p>
+                <p className="text-blue-200 mb-6 h-12">{tier.description}</p>
 
                 <div className="flex items-baseline mb-8">
                   {/* Modified price display for Entrepreneur tier */}
