@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Check, Sparkles, Building2, Crown, Star, ArrowRight } from 'lucide-react';
+import { Check, Sparkles, Building2, Crown, Star, ArrowRight, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Countdown from 'react-countdown';
 import { useState } from 'react';
@@ -33,6 +33,23 @@ const tiers = [
     link: 'https://751e3102-2fdb-41f7-bf0a-209cb1a5fdc9.paylinks.godaddy.com/09f9ae0f-839b-4a0a-a180-12c'
   },
   {
+    name: '100 Strong Community',
+    price: 250,
+    description: 'Fast-track offer to establishing a high-yielding portfolio within the FTE ecosystem',
+    icon: Users,
+    features: [
+      'Custom Package for 100 Strong Community',
+      'High-Yield Portfolio Setup',
+      'Exclusive Access to FTE Resources',
+      'Priority Support'
+    ],
+    // Changed from green to blue colors
+    color: 'from-blue-400 to-blue-600',
+    highlightColor: 'blue-400',
+    borderColor: 'border-blue-200',
+    link: 'https://751e3102-2fdb-41f7-bf0a-209cb1a5fdc9.paylinks.godaddy.com/100-strong-community'
+  },
+  {
     name: 'Investor',
     price: 2500,
     originalPrice: 5000,
@@ -51,9 +68,9 @@ const tiers = [
     color: 'from-purple-600 to-blue-600',
     highlightColor: 'purple-500',
     borderColor: 'border-purple-200',
-    // Changed from '/investor-application' to a direct GoDaddy payment link
     link: 'https://751e3102-2fdb-41f7-bf0a-209cb1a5fdc9.paylinks.godaddy.com/3031daf8-0bba-4f06-b444-e57'
   },
+  
   {
     name: 'Visionary',
     price: 'Contact us for a quote',
@@ -82,88 +99,28 @@ export default function Membership() {
   const [selectedTier, setSelectedTier] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  // New function to handle navigation to different pages based on tier
   const handleTierSelection = (tier: typeof tiers[0]) => {
     setIsLoading(true);
     setSelectedTier(tier.name);
-    
-    // Short timeout to show loading state before opening the link
+
     setTimeout(() => {
-      // Check if the link is external (starts with http or https)
       if (tier.link.startsWith('http')) {
-        // Open external links in a new tab
         window.open(tier.link, '_blank');
       } else {
-        // Use router for internal links
         router.push(tier.link);
       }
-      
-      // Reset loading state after navigation
+
       setIsLoading(false);
       setSelectedTier(null);
     }, 500);
   };
 
-  // Original Stripe checkout function (keeping it in case you need it for some tiers)
-  const handleSubscribe = async (tierName: string) => {
-    try {
-      setIsLoading(true);
-      setSelectedTier(tierName);
-
-      const response = await fetch('/api/create-checkout-session', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          tier: tierName.toUpperCase(),
-        }),
-      });
-
-      if (!response.ok) {
-        const errorData = await response.text();
-        throw new Error(errorData || 'Failed to create checkout session');
-      }
-
-      const data = await response.json();
-      
-      if (!data.sessionId) {
-        throw new Error('No session ID returned from the server');
-      }
-
-      const stripe = await stripePromise;
-      if (!stripe) {
-        throw new Error('Stripe failed to initialize');
-      }
-
-      const { error: stripeError } = await stripe.redirectToCheckout({
-        sessionId: data.sessionId,
-      });
-
-      if (stripeError) {
-        throw new Error(stripeError.message);
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      // Here you might want to show an error toast to the user
-    } finally {
-      setIsLoading(false);
-      setSelectedTier(null);
-    }
-  };
-
   return (
     <section className="relative py-20 px-4">
-      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#010E2F] via-[#0A2472] to-[#0E6BA8] -z-10"></div>
       <div className="absolute inset-0 bg-[url('/assets/images/pattern-bg.png')] opacity-10 -z-10"></div>
-      
-      {/* Animated background elements */}
-      <div className="absolute top-1/4 -left-20 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse -z-10"></div>
-      <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse -z-10" style={{ animationDelay: '1s' }}></div>
 
       <div className="max-w-7xl mx-auto relative">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -176,7 +133,7 @@ export default function Membership() {
               <span>Exclusive Membership Benefits</span>
             </div>
           </div>
-          
+
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
             Join Our <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-purple-300">Visionary</span> Community
           </h1>
@@ -185,7 +142,6 @@ export default function Membership() {
           </p>
         </motion.div>
 
-        {/* Countdown Timer */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -193,46 +149,27 @@ export default function Membership() {
           className="max-w-3xl mx-auto mb-16 relative"
         >
           <div className="bg-gradient-to-r from-blue-700/70 to-purple-800/70 backdrop-blur-lg rounded-2xl p-8 shadow-xl overflow-hidden">
-            <div className="absolute top-0 right-0 w-full h-full bg-[url('/assets/images/pattern-bg.png')] opacity-5"></div>
-            <div className="absolute top-0 left-0 w-40 h-40 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
-            
-            <div className="relative">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                <div className="mb-6 md:mb-0">
-                  <h3 className="text-2xl font-bold text-white">Special Launch Offer</h3>
-                  <p className="text-blue-200">Limited time pricing for early adopters</p>
-                </div>
-                
-                <Countdown
-                  date={countdownDate}
-                  renderer={({ days, hours, minutes, seconds }) => (
-                    <div className="flex space-x-4">
-                      <div className="flex flex-col items-center">
-                        <div className="w-16 h-16 bg-white/10 backdrop-blur rounded-lg flex items-center justify-center text-3xl font-bold text-white">{days}</div>
-                        <span className="text-xs mt-1 text-blue-200">Days</span>
+            <Countdown
+              date={countdownDate}
+              renderer={({ days, hours, minutes, seconds }) => (
+                <div className="flex space-x-4">
+                  {[days, hours, minutes, seconds].map((val, i) => (
+                    <div key={i} className="flex flex-col items-center">
+                      <div className="w-16 h-16 bg-white/10 backdrop-blur rounded-lg flex items-center justify-center text-3xl font-bold text-white">
+                        {val}
                       </div>
-                      <div className="flex flex-col items-center">
-                        <div className="w-16 h-16 bg-white/10 backdrop-blur rounded-lg flex items-center justify-center text-3xl font-bold text-white">{hours}</div>
-                        <span className="text-xs mt-1 text-blue-200">Hours</span>
-                      </div>
-                      <div className="flex flex-col items-center">
-                        <div className="w-16 h-16 bg-white/10 backdrop-blur rounded-lg flex items-center justify-center text-3xl font-bold text-white">{minutes}</div>
-                        <span className="text-xs mt-1 text-blue-200">Minutes</span>
-                      </div>
-                      <div className="flex flex-col items-center">
-                        <div className="w-16 h-16 bg-white/10 backdrop-blur rounded-lg flex items-center justify-center text-3xl font-bold text-white">{seconds}</div>
-                        <span className="text-xs mt-1 text-blue-200">Seconds</span>
-                      </div>
+                      <span className="text-xs mt-1 text-blue-200">
+                        {['Days', 'Hours', 'Minutes', 'Seconds'][i]}
+                      </span>
                     </div>
-                  )}
-                />
-              </div>
-            </div>
+                  ))}
+                </div>
+              )}
+            />
           </div>
         </motion.div>
 
-        {/* Price Cards */}
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
+        <div className="grid md:grid-cols-4 gap-8 lg:gap-10">
           {tiers.map((tier, index) => (
             <motion.div
               key={tier.name}
@@ -243,62 +180,24 @@ export default function Membership() {
                 tier.popular ? 'md:scale-105 md:-translate-y-2 z-10' : ''
               }`}
             >
-              {/* Popular badge */}
-              {tier.popular && (
-                <div className="absolute top-0 right-0">
-                  <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-1 rounded-bl-lg text-sm font-medium shadow-lg">
-                    Most Popular
-                  </div>
-                </div>
-              )}
-              
-              {/* Limited Time Offer badge */}
-              {tier.limitedOffer && !tier.popular && (
-                <div className="absolute top-0 right-0">
-                  <div className="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-6 py-1 rounded-bl-lg text-sm font-medium shadow-lg">
-                    Limited Time Offer
-                  </div>
-                </div>
-              )}
-              
-              {/* Card border glow */}
               <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${tier.color} opacity-20 group-hover:opacity-30 transition-opacity`}></div>
-              
+
               <div className="px-8 pt-10 pb-10 relative">
-                {/* Header */}
                 <div className={`inline-flex items-center justify-center w-14 h-14 rounded-lg bg-gradient-to-r ${tier.color} mb-6`}>
                   <tier.icon className="h-7 w-7 text-white" />
                 </div>
-                
+
                 <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
                 <p className="text-blue-200 mb-6 h-14">{tier.description}</p>
-                
+
                 <div className="flex items-baseline mb-8">
-                  {/* Modified price display for Entrepreneur tier */}
-                  {tier.name === 'Entrepreneur' ? (
-                    <div className="flex items-center flex-wrap">
-                      <span className="text-5xl font-bold text-white">${tier.price}</span>
-                      <span className="ml-3 line-through text-gray-400 text-xl">${tier.originalPrice}</span>
-                      <span className="ml-3 bg-blue-500 text-white text-xs px-2 py-1 rounded-full">
-                        95% OFF
-                      </span>
-                    </div>
-                  ) : tier.name === 'Investor' ? (
-                    <div className="flex items-center flex-wrap">
-                      <span className="text-5xl font-bold text-white">${tier.price}</span>
-                      <span className="ml-3 line-through text-gray-400 text-xl">${tier.originalPrice}</span>
-                      <span className="ml-3 bg-purple-500 text-white text-xs px-2 py-1 rounded-full">
-                        50% OFF
-                      </span>
-                    </div>
-                  ) : typeof tier.price === 'number' ? (
+                  {typeof tier.price === 'number' ? (
                     <span className="text-5xl font-bold text-white">${tier.price}</span>
                   ) : (
                     <span className="text-3xl font-bold text-white">{tier.price}</span>
                   )}
                 </div>
-                
-                {/* Features */}
+
                 <ul className="space-y-4 mb-10 min-h-[280px]">
                   {tier.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-3">
@@ -307,8 +206,7 @@ export default function Membership() {
                     </li>
                   ))}
                 </ul>
-                
-                {/* Button - Now using the custom link for each tier */}
+
                 <Button
                   onClick={() => handleTierSelection(tier)}
                   disabled={isLoading || selectedTier === tier.name}
