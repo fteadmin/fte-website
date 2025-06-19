@@ -30,7 +30,7 @@ const tiers = [
     highlightColor: 'blue-500',
     borderColor: 'border-blue-200',
     limitedOffer: true,
-    link: 'https://751e3102-2fdb-41f7-bf0a-209cb1a5fdc9.paylinks.godaddy.com/a98ddce1-35fe-4db5-a342-826'
+    link: 'https://751e3102-2fdb-41f7-bf0a-209cb1a5fdc9.paylinks.godaddy.com/ee7b01ff-5d7b-43f4-b196-46b'
   },
   {
     name: '100 Strong',
