@@ -35,7 +35,8 @@ const tiers = [
   {
     name: '100 Strong',
     price: 250,
-    // Shortened description that's clearer and more concise
+    // Added limited offer flag
+    limitedOffer: true,
     description: 'Fast-track to a high-yield FTE portfolio',
     icon: Users,
     features: [
@@ -51,8 +52,9 @@ const tiers = [
   },
   {
     name: 'Investor',
-    price: 2500,
-    originalPrice: 5000,
+    // Changed price back to 5000
+    price: 5000,
+    // Removed originalPrice to remove the strikethrough
     description: 'Access Funding Opportunities',
     icon: Building2,
     features: [
@@ -64,7 +66,7 @@ const tiers = [
       'Priority Support'
     ],
     popular: true,
-    limitedOffer: true,
+    // Removed limitedOffer flag
     color: 'from-purple-600 to-blue-600',
     highlightColor: 'purple-500',
     borderColor: 'border-purple-200',
@@ -91,7 +93,7 @@ const tiers = [
 ];
 
 // Set countdown date to June 24, 2025 (7 days from June 17, 2025)
-const countdownDate = new Date('2025-06-24T00:00:00');
+// const countdownDate = new Date('2025-06-24T00:00:00');
 
 export default function Membership() {
   const router = useRouter();
@@ -141,6 +143,7 @@ export default function Membership() {
           </p>
         </motion.div>
 
+        {/* Countdown Timer - commented out 
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -182,6 +185,7 @@ export default function Membership() {
             </div>
           </div>
         </motion.div>
+        */}
 
         <div className="grid md:grid-cols-4 gap-8 lg:gap-10">
           {tiers.map((tier, index) => (
@@ -223,21 +227,13 @@ export default function Membership() {
                 <p className="text-blue-200 mb-6 h-12">{tier.description}</p>
 
                 <div className="flex items-baseline mb-8">
-                  {/* Modified price display for Entrepreneur tier */}
+                  {/* Modified price display for Entrepreneur tier only */}
                   {tier.name === 'Entrepreneur' ? (
                     <div className="flex items-center flex-wrap">
                       <span className="text-5xl font-bold text-white">${tier.price}</span>
                       <span className="ml-3 line-through text-gray-400 text-xl">${tier.originalPrice}</span>
                       <span className="ml-3 bg-blue-500 text-white text-xs px-2 py-1 rounded-full">
                         95% OFF
-                      </span>
-                    </div>
-                  ) : tier.name === 'Investor' ? (
-                    <div className="flex items-center flex-wrap">
-                      <span className="text-5xl font-bold text-white">${tier.price}</span>
-                      <span className="ml-3 line-through text-gray-400 text-xl">${tier.originalPrice}</span>
-                      <span className="ml-3 bg-purple-500 text-white text-xs px-2 py-1 rounded-full">
-                        50% OFF
                       </span>
                     </div>
                   ) : typeof tier.price === 'number' ? (
