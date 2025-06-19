@@ -48,7 +48,7 @@ const tiers = [
     color: 'from-blue-400 to-blue-600',
     highlightColor: 'blue-400',
     borderColor: 'border-blue-200',
-    link: 'https://751e3102-2fdb-41f7-bf0a-209cb1a5fdc9.paylinks.godaddy.com/1ad52fae-9b95-42f2-82ff-0c0'
+    link: 'https://751e3102-2fdb-41f7-bf0a-209cb1a5fdc9.paylinks.godaddy.com/557ced67-278a-4d22-a677-d66'
   },
   {
     name: 'Investor',
@@ -70,7 +70,7 @@ const tiers = [
     color: 'from-purple-600 to-blue-600',
     highlightColor: 'purple-500',
     borderColor: 'border-purple-200',
-    link: 'https://751e3102-2fdb-41f7-bf0a-209cb1a5fdc9.paylinks.godaddy.com/3031daf8-0bba-4f06-b444-e57'
+    link: 'https://751e3102-2fdb-41f7-bf0a-209cb1a5fdc9.paylinks.godaddy.com/2fe73b7e-3946-49de-b8ad-6f5'
   },
   {
     name: 'Visionary',
