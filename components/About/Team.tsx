@@ -34,7 +34,7 @@ export default function Team() {
       name: "Carmelle Neal",
       role: "Community Relations Director",
       bio: "Carmelle has over a decade of experience in community outreach initiatives. With a passion for relationship-building, Carmelle ensures FTE remains engaged with its members, stakeholders, and broader networks, strengthening its impact and community-driven mission.",
-      image: "/assets/team/car.jpg"
+      image: "/assets/team/car2.jpg"
     },
     {
       name: "Mimi Aremu",
