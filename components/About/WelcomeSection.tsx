@@ -24,7 +24,7 @@ export default function WelcomeSection() {
                 We transform innovation into opportunity by building interconnected ecosystems where community, technology, and commerce converge.
               </p>
               <p>
-               Our signature process defines who we are:
+              Our  process defines who we are:
               We identify markets with high upside potential, establish a built-in community around them, and apply strategic policies that scale profits. This approach ensures that every project we launch is grounded in real-world relevance, supported by engaged stakeholders, and positioned for long-term growth.
               At the heart of our enterprise is a commitment to inclusive wealth creation. Through platforms like Pro Tribe and Life Connect, we empower visionary founders, creators, and community members to thrive inside an ecosystem designed for elevation.
               </p>
