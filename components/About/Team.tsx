@@ -19,9 +19,9 @@ export default function Team() {
       image: "/assets/team/alf.jpg" // Update with actual image path
     },
     {
-      name: "Kevin Crawford",
+      name: "Omari Sherif",
       role: "Business Strategist & Integrator",
-      bio: "Kevin is a results-driven Business Strategist specializing in aligning operations, teams, and systems to drive growth and efficiency.",
+      bio: "Omari is a results-driven Business Strategist specializing in aligning operations, teams, and systems to drive growth and efficiency.",
       image: "/assets/team/img-3.jpg" // Update with actual image path
     },
     {

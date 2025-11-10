@@ -72,7 +72,6 @@ export default function Footer() {
                   Contact
                 </Link>
               </li>
-             
             </ul>
           </motion.div>
 
@@ -129,6 +128,11 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-white/10">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-4">
+            <p className="text-white/80 text-sm">
+              Identifying markets. Empowering communities. Transforming futures.
+            </p>
+          </div>
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/80 text-sm">
               © {currentYear} Future Trends Enterprise. All rights reserved.

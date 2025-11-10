@@ -32,24 +32,24 @@ const tiers = [
     limitedOffer: true,
     link: 'https://751e3102-2fdb-41f7-bf0a-209cb1a5fdc9.paylinks.godaddy.com/ee7b01ff-5d7b-43f4-b196-46b'
   },
-  {
-    name: '100 Strong',
-    price: 250,
-    // Added limited offer flag
-    limitedOffer: true,
-    description: 'Fast-track to a high-yield FTE portfolio',
-    icon: Users,
-    features: [
-      'Custom Package for 100 Strong Community',
-      'High-Yield Portfolio Setup',
-      'Exclusive Access to FTE Resources',
-      'Priority Support'
-    ],
-    color: 'from-blue-400 to-blue-600',
-    highlightColor: 'blue-400',
-    borderColor: 'border-blue-200',
-    link: 'https://751e3102-2fdb-41f7-bf0a-209cb1a5fdc9.paylinks.godaddy.com/557ced67-278a-4d22-a677-d66'
-  },
+  // {
+  //   name: '100 Strong',
+  //   price: 250,
+  //   // Added limited offer flag
+  //   limitedOffer: true,
+  //   description: 'Fast-track to a high-yield FTE portfolio',
+  //   icon: Users,
+  //   features: [
+  //     'Custom Package for 100 Strong Community',
+  //     'High-Yield Portfolio Setup',
+  //     'Exclusive Access to FTE Resources',
+  //     'Priority Support'
+  //   ],
+  //   color: 'from-blue-400 to-blue-600',
+  //   highlightColor: 'blue-400',
+  //   borderColor: 'border-blue-200',
+  //   link: 'https://751e3102-2fdb-41f7-bf0a-209cb1a5fdc9.paylinks.godaddy.com/557ced67-278a-4d22-a677-d66'
+  // },
   {
     name: 'Investor',
     // Changed price back to 5000

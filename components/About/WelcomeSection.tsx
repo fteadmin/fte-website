@@ -16,24 +16,22 @@ export default function WelcomeSection() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">Welcome to Future Trends Enterprise</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">About Us </h2>
             
             <div className="text-gray-700 space-y-6 text-lg">
               <p>
-                Welcome to Future Trends Enterprise Inc., where we believe in creating pathways to sustainable business growth, opportunities, and
-                legacy.
+                Future Trends Enterprise (FTE) is a forward-thinking technology company that seamlessly integrates advanced solutions across digital and physical spaces.
+                We transform innovation into opportunity by building interconnected ecosystems where community, technology, and commerce converge.
               </p>
               <p>
-                Our membership structure is designed with a clear progression in mind - taking you from the foundations of entrepreneurship to
-                advanced wealth structuring strategies. We havee carefully crafted each tier to provide exactly what you need at your current stage while
-                preparing you for what comes next.
+               Our signature process defines who we are:
+              We identify markets with high upside potential, establish a built-in community around them, and apply strategic policies that scale profits. This approach ensures that every project we launch is grounded in real-world relevance, supported by engaged stakeholders, and positioned for long-term growth.
+              At the heart of our enterprise is a commitment to inclusive wealth creation. Through platforms like Pro Tribe and Life Connect, we empower visionary founders, creators, and community members to thrive inside an ecosystem designed for elevation.
               </p>
               <p>
-                Whether you are just starting your business journey, ready to attract investment, or looking to establish complex corporate structures for
-                long-term wealth preservation, FTE provides the education, resources, and community to help you succeed.
-              </p>
-              <p>
-                Let us explore how FTE can become your partner in building not just a business, but a legacy.
+                These platforms offer strategic guidance, access to resources, collaboration opportunities, and shared value streams that accelerate both personal and business development.
+                Innovation drives our solutions, community fuels our momentum, and excellence defines our standards. Whether we are building digital systems, physical environments, or hybrid experiences, FTE ensures that every connection contributes to a larger goal: impact, scalability, and sustainable profit.
+                Future Trends Enterprise is more than a company; it's a movement designed to unlock potential, elevate communities, and reshape the way modern businesses grow.
               </p>
               
               {/* Explore Memberships Button */}
@@ -57,7 +55,7 @@ export default function WelcomeSection() {
             className="relative h-[400px] md:h-[500px] rounded-xl overflow-hidden shadow-xl"
           >
             <Image
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80"
+              src="/assets/graphic.png"
               alt="Business professionals collaborating"
               fill
               className="object-cover"
