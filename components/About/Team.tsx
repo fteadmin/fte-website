@@ -8,7 +8,7 @@ export default function Team() {
   const teamMembers = [
     {
       name: "Ben Larkpor",
-      role: "Founder and CEO",
+      role: "Founder",
       bio: "Visionary leader with a passion for bridging technology and social impact. Ben founded Future Trends Enterprise to create innovative ecosystems that empower communities and businesses.",
       image: "/assets/team/ben.jpeg" // Update with actual image path
     },
