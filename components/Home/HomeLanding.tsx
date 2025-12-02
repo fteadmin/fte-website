@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, ChevronDown } from 'lucide-react';
+import { ArrowRight, ChevronDown, Play, Pause } from 'lucide-react';
 import { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
 
@@ -11,6 +11,7 @@ export default function HomeLanding() {
   const [isMounted, setIsMounted] = useState(false);
   // Reference to the video element
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
   
   // Scroll to the next section when the scroll button is clicked
   const scrollToNextSection = () => {
@@ -28,12 +29,16 @@ export default function HomeLanding() {
     
     // Auto-play the video when component mounts
     if (videoRef.current) {
+      // Ensure the video does not loop (defensive in case attribute exists elsewhere)
+      videoRef.current.loop = false;
       // Sometimes mobile browsers block autoplay, so we handle it with the play() method
       const playVideo = async () => {
         try {
           await videoRef.current?.play();
+          setIsPlaying(true);
         } catch (error) {
           console.log("Video autoplay prevented by browser", error);
+          setIsPlaying(false);
         }
       };
       
@@ -306,12 +311,43 @@ export default function HomeLanding() {
                     ref={videoRef}
                     className="w-full h-full object-cover"
                     autoPlay
-                    loop
                     playsInline
+                    onEnded={() => {
+                      // Extra safety: ensure playback stops and stays stopped after ending
+                      try {
+                        videoRef.current?.pause();
+                        if (videoRef.current) videoRef.current.loop = false;
+                        setIsPlaying(false);
+                      } catch (e) {
+                        // ignore
+                      }
+                    }}
                   >
                     <source src="/assets/alfonzo.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
+                  {/* Play/Pause toggle overlay */}
+                  <button
+                    onClick={async () => {
+                      if (!videoRef.current) return;
+                      try {
+                        if (videoRef.current.paused) {
+                          await videoRef.current.play();
+                          setIsPlaying(true);
+                        } else {
+                          videoRef.current.pause();
+                          setIsPlaying(false);
+                        }
+                      } catch (e) {
+                        // ignore playback errors
+                        setIsPlaying(!videoRef.current?.paused);
+                      }
+                    }}
+                    aria-label={isPlaying ? 'Pause video' : 'Play video'}
+                    className="absolute z-30 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/50 text-white p-3 rounded-full"
+                  >
+                    {isPlaying ? <Pause size={20} /> : <Play size={20} />}
+                  </button>
                 </div>
               </div>
             </motion.div>
