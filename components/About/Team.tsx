@@ -6,23 +6,29 @@ import TeamMember from './TeamMember';
 export default function Team() {
   // Updated team members data with the provided information
   const teamMembers = [
+      {
+      name: "Curtis Randolph",
+      role: "CEO",
+      bio: "Curtis Randolph is the visionary Founder and CEO of Future Trends Enterprise. Driven by a passion for bridging technology and social impact, he has established the company as a leader in creating innovative ecosystems. Curtis's focus is on empowering both communities and businesses to thrive in the modern technological landscape.",
+      image: "/assets/team/curtis.webp" // Update with actual image path
+    },
     {
       name: "Ben Larkpor",
       role: "Founder",
       bio: "Visionary leader with a passion for bridging technology and social impact. Ben founded Future Trends Enterprise to create innovative ecosystems that empower communities and businesses.",
       image: "/assets/team/ben.jpeg" // Update with actual image path
     },
-    {
-      name: "Alfonzo Spigner",
-      role: "Chief Creative Officer (CCO)",
-      bio: "Leads FTE's creative vision, brand identity, and innovation strategies. Alfonzo oversees design, marketing, content, and product aesthetics to ensure consistency and engagement across all platforms.",
-      image: "/assets/team/alf.jpg" // Update with actual image path
-    },
+    // {
+    //   name: "Alfonzo Spigner",
+    //   role: "Chief Creative Officer (CCO)",
+    //   bio: "Leads FTE's creative vision, brand identity, and innovation strategies. Alfonzo oversees design, marketing, content, and product aesthetics to ensure consistency and engagement across all platforms.",
+    //   image: "/assets/team/alf.jpg" // Update with actual image path
+    // },
     {
       name: "Omari Sherif",
       role: "Business Strategist & Integrator",
       bio: "Omari is a results-driven Business Strategist specializing in aligning operations, teams, and systems to drive growth and efficiency.",
-      image: "/assets/team/img-3.jpg" // Update with actual image path
+      image: "/assets/team/omari.png" // Update with actual image path
     },
     {
       name: "Timothy Neal",
