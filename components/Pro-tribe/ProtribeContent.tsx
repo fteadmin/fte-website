@@ -56,7 +56,7 @@ export default function ProtribeContent() {
     { 
       name: "Good Chef Co", 
       category: "Food & Beverage", 
-      logoSrc: "/assets/logos/good.png",
+      logoSrc: "/assets/logos/goodchef.png",
       description: "Reimagining culinary experiences with sustainable, locally-sourced ingredients and innovative flavors."
     },
     { 

@@ -3,7 +3,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { ChefHat, Users, TrendingUp, CalendarDays } from 'lucide-react';
+import goodchefLogo from '../../public/assets/logos/goodchef.png';
+import { Users, TrendingUp } from 'lucide-react';
 
 export default function GoodChefCoContent() {
   return (
@@ -59,8 +60,14 @@ export default function GoodChefCoContent() {
               className="space-y-6"
             >
               <div className="flex items-start gap-4">
-                <div className="bg-blue-100 p-3 rounded-lg">
-                  <ChefHat className="h-6 w-6 text-[#0A2472]" />
+                <div className="bg-blue-100 p-2 rounded-lg flex items-center justify-center">
+                  <Image
+                    src={goodchefLogo}
+                    alt="Good Chef Co logo"
+                    width={28}
+                    height={28}
+                    className="object-contain"
+                  />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2 text-[#010E2F]">Elite Business Accelerator</h3>

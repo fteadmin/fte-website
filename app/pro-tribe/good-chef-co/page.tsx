@@ -9,7 +9,7 @@ export default function GoodChefCoPage() {
         description="Good Chef Co represents the future of culinary entrepreneurship, offering a groundbreaking platform that unites ambitious chefs with passionate food enthusiasts. Our innovative dual-market solution combines a comprehensive chef incubator program with an exclusive membership-based dining community, creating unprecedented opportunities for culinary innovation and exceptional dining experiences.
 
 "
-        logo="/assets/logos/good.png"
+        logo="/assets/logos/goodchef.png"
         website="https://goodchefco.com"
         social={{
           facebook: "https://facebook.com/goodchefco",
@@ -18,9 +18,9 @@ export default function GoodChefCoPage() {
           instagram: "https://instagram.com/goodchefco"
         }}
         contact={{
-          email: "hello@goodchefco.com",
-          phone: "(555) 567-8901",
-          address: "567 Culinary Lane, Food District, FD 45678"
+          email: "info@goodchefco.com",
+          phone: "(818) 651-7779",
+          address: "1401 21st ST Studio R, Sacramento, CA 95811, US"
         }}
       />
       

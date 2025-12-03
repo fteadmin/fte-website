@@ -44,7 +44,7 @@ export default function BusinessLogos() {
     { name: "Zariel and Co", logoSrc: "/assets/logos/z.jpg" },
     { name: "Phylos", logoSrc: "/assets/logos/phylos.png" },
     { name: "Nx LVL", logoSrc: "/assets/logos/nx.jpg" },
-    { name: "Good Chef Co", logoSrc: "/assets/logos/good.png" },
+    { name: "Good Chef Co", logoSrc: "/assets/logos/goodchef.png" },
     { name: "Launch Couture", logoSrc: "/assets/logos/lc.png" },
   ];
 
