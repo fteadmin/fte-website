@@ -16,9 +16,9 @@ export default function ZarielAndCoPage() {
         instagram: "https://instagram.com/zarielandco"
       }}
       contact={{
-        email: "contact@zarielandco.com",
-        phone: "(555) 234-5678",
-        address: "456 Innovation Plaza, Business District, BD 67890"
+        email: "info@zaniyazariel.com",
+        phone: "+1 (424) 491-5669",
+        address: "1401 21st St Ste R, Sacramento County, CA 95811"
       }}
     />
     <ScriptedContent />
