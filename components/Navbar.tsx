@@ -154,6 +154,13 @@ export default function Navbar() {
                       >
                         Pro Tribe Overview
                       </Link>
+                      {/* Pro Tribe updates link */}
+                      <Link
+                        href="/pro-tribe/updates"
+                        className="block p-2 mt-2 text-white bg-white/10 hover:bg-white/20 rounded-md transition-colors font-medium"
+                      >
+                        Pro Tribe Updates
+                      </Link>
                       
                       <div className="grid gap-2 mt-3">
                         <div className="text-white/80 text-xs uppercase tracking-wide pl-2">Our Businesses</div>
@@ -206,6 +213,13 @@ export default function Navbar() {
                   <Link href="/membership" legacyBehavior passHref>
                     <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent text-white hover:bg-white/10")}>
                       Membership
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <Link href="/pro-tribe/updates" legacyBehavior passHref>
+                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent text-white hover:bg-white/10")}>
+                      Updates
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
@@ -290,6 +304,14 @@ export default function Navbar() {
                       <Building2 className="h-4 w-4 mr-2" />
                       Pro Tribe Overview
                     </Link>
+                        <Link
+                          href="/pro-tribe/updates"
+                          className="flex items-center text-white py-2 hover:bg-white/10 rounded-md px-3 font-medium"
+                          onClick={toggleMobileMenu}
+                        >
+                          <Building2 className="h-4 w-4 mr-2" />
+                          Pro Tribe Updates
+                        </Link>
                     <div className="pl-2 border-l border-white/20 ml-1 space-y-1 mt-2">
                       {proTribeContent.businesses.map((business) => (
                         <Link
@@ -353,6 +375,13 @@ export default function Navbar() {
                 onClick={toggleMobileMenu}
               >
                 Contact
+              </Link>
+              <Link 
+                href="/pro-tribe/updates" 
+                className="text-white text-lg py-2 hover:bg-white/10 rounded-md px-3"
+                onClick={toggleMobileMenu}
+              >
+                Updates
               </Link>
             </nav>
           </div>
