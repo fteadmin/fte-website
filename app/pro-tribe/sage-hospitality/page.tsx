@@ -5,10 +5,10 @@ export default function SageHospitalityPage() {
   return (
     <>
       <BusinessPage
-        name="Sage Hospitality and Concierge"
+        name="Sage Hospitality Lifestyle Concierge"
         description="Sage Hospitality and Concierge provides comprehensive real estate solutions spanning residential properties, commercial investments, and premium concierge services. We guide clients through every step of their real estate journey with personalized support and expert insights."
-        logo="/assets/logos/sage.jpg"
-        website="https://sagehospitality.com"
+        logo="/assets/logos/Sage.png"
+        website="https://www.sagehrc.com/"
         social={{
           facebook: "https://facebook.com/sagehospitality",
           twitter: "https://twitter.com/sagehospitality",
@@ -17,8 +17,8 @@ export default function SageHospitalityPage() {
         }}
         contact={{
           email: "info@sagehospitality.com",
-          phone: "(555) 345-6789",
-          address: "789 Concierge Boulevard, Hospitality District, HD 78901"
+          phone: "(213) 754-6388",
+          address: "Global"
         }}
       />
       
