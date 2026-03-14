@@ -74,7 +74,7 @@ const tiers = [
   },
   {
     name: 'Visionary',
-    price: 'Contact us for a quote',
+    price: '$25,000',
     description: 'Build a Legacy',
     icon: Crown,
     features: [
@@ -88,7 +88,7 @@ const tiers = [
     color: 'from-blue-700 to-indigo-900',
     highlightColor: 'blue-700',
     borderColor: 'border-blue-300',
-    link: '/contact-us'
+    link: 'https://751e3102-2fdb-41f7-bf0a-209cb1a5fdc9.paylinks.godaddy.com/44c72e33-5c7a-4a6c-a33b-f58'
   }
 ];
 
@@ -239,7 +239,7 @@ export default function Membership() {
                   ) : typeof tier.price === 'number' ? (
                     <span className="text-5xl font-bold text-white">${tier.price}</span>
                   ) : (
-                    <span className="text-3xl font-bold text-white">{tier.price}</span>
+                    <span className="text-5xl font-bold text-white">{tier.price}</span>
                   )}
                 </div>
 
@@ -264,7 +264,7 @@ export default function Membership() {
                     </div>
                   ) : (
                     <div className="flex items-center">
-                      {tier.name === 'Visionary' ? 'Contact Us' : 'Get Started'}
+                      {'Get Started'}
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </div>
                   )}
