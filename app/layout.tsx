@@ -11,6 +11,11 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'FTE - Future Trends Enterprise',
   description: 'Building Thriving Communities Through Innovation',
+  icons: {
+    icon: '/assets/logos/logo.png',
+    shortcut: '/assets/logos/logo.png',
+    apple: '/assets/logos/logo.png',
+  },
 };
 
 export default function RootLayout({
