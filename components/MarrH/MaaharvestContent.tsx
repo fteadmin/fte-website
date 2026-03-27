@@ -65,7 +65,7 @@ export default function MaaharvestContent() {
                 <p className="text-lg text-gray-700 mb-6">
                   Maa Harvest is more than just a culinary event—it is the soul-nourishing ritual that unites the Life Connect Cohort
                   under a shared mission of holistic living, conscious consumption, and community restoration. Developed as a signature 
-                  activation of Good Chef Co, a vertical incubated through Pro Tribe, Maa Harvest represents the crossroads of nourishment, 
+                  activation of Good Chef Co, a vertical incubated through the ecosystem, Maa Harvest represents the crossroads of nourishment, 
                   culture, and connection.
                 </p>
                 <p className="text-lg text-gray-700 mb-6">
@@ -119,7 +119,7 @@ export default function MaaharvestContent() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold text-[#010E2F] mb-4">Pro Tribe Incubator Activation</h2>
+            <h2 className="text-3xl font-bold text-[#010E2F] mb-4">Ecosystem Incubator Activation</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               A revenue-generating showcase and community builder powering culinary innovation
             </p>

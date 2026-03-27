@@ -16,7 +16,7 @@ const tiers = [
     name: 'Entrepreneur',
     price: 125,
     originalPrice: 2500,
-    description: 'Unlock Your Limitless Potential',
+    description: 'Founder Foundation Track',
     icon: Sparkles,
     features: [
       'Master Financial Mastery',
@@ -55,7 +55,7 @@ const tiers = [
     // Changed price back to 5000
     price: 5000,
     // Removed originalPrice to remove the strikethrough
-    description: 'Access Funding Opportunities',
+    description: 'Capital & Deal Flow Track',
     icon: Building2,
     features: [
       'All Entrepreneur Features',
@@ -75,7 +75,7 @@ const tiers = [
   {
     name: 'Visionary',
     price: '$25,000',
-    description: 'Build a Legacy',
+    description: 'Strategic Enterprise Track',
     icon: Crown,
     features: [
       'All Investor Features',
@@ -131,15 +131,15 @@ export default function Membership() {
           <div className="inline-block mb-6">
             <div className="bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-blue-300 font-medium inline-flex items-center">
               <Star className="h-4 w-4 mr-2" />
-              <span>Exclusive Membership Benefits</span>
+              <span>Ecosystem Membership Access</span>
             </div>
           </div>
 
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Join Our <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-purple-300">Visionary</span> Community
+            Choose Your <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-purple-300">Ecosystem</span> Pathway
           </h1>
           <p className="text-xl text-white/80 max-w-3xl mx-auto">
-            Unlock resources, connections, and strategies that propel your business forward with our carefully crafted membership tiers.
+            Each tier is designed for a specific stage, from founder execution to investor access and strategic enterprise expansion.
           </p>
         </motion.div>
 

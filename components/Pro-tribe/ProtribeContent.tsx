@@ -393,10 +393,9 @@ export default function ProtribeContent() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold mb-6 text-[#010E2F]">Our Business Portfolio</h2>
+              <h2 className="text-3xl font-bold mb-6 text-[#010E2F]">Ecosystem Brand Portfolio</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              Discover the innovative companies that are part of the Pro Tribe ecosystem, each contributing uniquely 
-              to our collective vision of building successful, sustainable businesses.
+                Explore active and emerging ventures connected to the Pro Tribe operating layer, each contributing to the broader FTE growth model.
             </p>
           </motion.div>
 

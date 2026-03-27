@@ -2,16 +2,13 @@
 
 import * as React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, ChevronDown, Play, Pause } from 'lucide-react';
-import { useEffect, useState, useRef } from 'react';
+import { ArrowRight, ChevronDown } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 export default function HomeLanding() {
   // State to track client-side rendering
   const [isMounted, setIsMounted] = useState(false);
-  // Reference to the video element
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
   
   // Scroll to the next section when the scroll button is clicked
   const scrollToNextSection = () => {
@@ -26,24 +23,6 @@ export default function HomeLanding() {
   // Set isMounted to true when component mounts on client
   useEffect(() => {
     setIsMounted(true); 
-    
-    // Auto-play the video when component mounts
-    if (videoRef.current) {
-      // Ensure the video does not loop (defensive in case attribute exists elsewhere)
-      videoRef.current.loop = false;
-      // Sometimes mobile browsers block autoplay, so we handle it with the play() method
-      const playVideo = async () => {
-        try {
-          await videoRef.current?.play();
-          setIsPlaying(true);
-        } catch (error) {
-          console.log("Video autoplay prevented by browser", error);
-          setIsPlaying(false);
-        }
-      };
-      
-      playVideo();
-    }
   }, []);
   
   return (
@@ -275,8 +254,8 @@ export default function HomeLanding() {
                 transition={{ duration: 0.8, delay: 0.8 }}
                 className="flex justify-center md:justify-start pb-5"
               >
-                <Link href="/about" className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-transparent text-white rounded-full font-vietnam-pro font-semibold hover:bg-white/10 transition-all duration-300 flex items-center border-2 border-white text-sm sm:text-base">
-                  Learn More
+                <Link href="/ecosystem" className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-transparent text-white rounded-full font-vietnam-pro font-semibold hover:bg-white/10 transition-all duration-300 flex items-center border-2 border-white text-sm sm:text-base">
+                  Explore Ecosystem
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
               </motion.div>
@@ -293,7 +272,7 @@ export default function HomeLanding() {
                 {/* Outer decorative ring */}
                 <div className="absolute inset-0 rounded-full border-2 sm:border-4 border-white/20 -m-2 sm:-m-4"></div>
                 
-                {/* Inner circle with video */}
+                {/* Inner circle with image */}
                 <motion.div 
                   initial={{ rotate: 0 }}
                   animate={{ rotate: 360 }}
@@ -301,53 +280,16 @@ export default function HomeLanding() {
                   className="absolute inset-0 rounded-full border border-white/10 -m-1 sm:-m-2"
                 ></motion.div>
                 
-                {/* Video container - responsive sizes */}
+                {/* Image container - responsive sizes */}
                 <div className="w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden relative">
                   {/* Gradient overlay to ensure text readability */}
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 via-transparent to-transparent z-10"></div>
-                  
-                  {/* Video element */}
-                  <video
-                    ref={videoRef}
+                  <img
+                    src="https://images.pexels.com/photos/7681091/pexels-photo-7681091.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                    alt="Venture capital team reviewing startup investment strategy"
                     className="w-full h-full object-cover"
-                    autoPlay
-                    playsInline
-                    onEnded={() => {
-                      // Extra safety: ensure playback stops and stays stopped after ending
-                      try {
-                        videoRef.current?.pause();
-                        if (videoRef.current) videoRef.current.loop = false;
-                        setIsPlaying(false);
-                      } catch (e) {
-                        // ignore
-                      }
-                    }}
-                  >
-                    <source src="/assets/alfonzo.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                  {/* Play/Pause toggle overlay */}
-                  <button
-                    onClick={async () => {
-                      if (!videoRef.current) return;
-                      try {
-                        if (videoRef.current.paused) {
-                          await videoRef.current.play();
-                          setIsPlaying(true);
-                        } else {
-                          videoRef.current.pause();
-                          setIsPlaying(false);
-                        }
-                      } catch (e) {
-                        // ignore playback errors
-                        setIsPlaying(!videoRef.current?.paused);
-                      }
-                    }}
-                    aria-label={isPlaying ? 'Pause video' : 'Play video'}
-                    className="absolute z-30 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/50 text-white p-3 rounded-full"
-                  >
-                    {isPlaying ? <Pause size={20} /> : <Play size={20} />}
-                  </button>
+                    loading="lazy"
+                  />
                 </div>
               </div>
             </motion.div>

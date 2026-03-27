@@ -13,11 +13,11 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
-import { Building2, Leaf, Menu, X, ChevronDown, ChevronRight } from 'lucide-react';
+import { Building2, Menu, X, ChevronDown, ChevronRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
-const proTribeContent = {
-  title: 'Pro Tribe',
+const ecosystemContent = {
+  title: 'Ecosystem Brands',
   businesses: [
     'Good Chef Co', 
     'Sage Hospitality', 
@@ -28,15 +28,9 @@ const proTribeContent = {
   ]
 };
 
-const lifeConnectContent = {
-  title: 'Life Connect',
-  businesses: ['MaaHarvest', 'Entreprenuer lifestyle', 'House Party']
-};
-
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isProTribeOpen, setIsProTribeOpen] = useState(false);
-  const [isLifeConnectOpen, setIsLifeConnectOpen] = useState(false);
+  const [isEcosystemOpen, setIsEcosystemOpen] = useState(false);
 
   // Close mobile menu when clicking outside
   useEffect(() => {
@@ -78,14 +72,9 @@ export default function Navbar() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  // Toggle Pro Tribe dropdown in mobile view
-  const toggleProTribe = () => {
-    setIsProTribeOpen(!isProTribeOpen);
-  };
-
-  // Toggle Life Connect dropdown in mobile view
-  const toggleLifeConnect = () => {
-    setIsLifeConnectOpen(!isLifeConnectOpen);
+  // Toggle Ecosystem dropdown in mobile view
+  const toggleEcosystem = () => {
+    setIsEcosystemOpen(!isEcosystemOpen);
   };
 
   return (
@@ -134,40 +123,40 @@ export default function Navbar() {
                 <NavigationMenuItem>
                   <Link href="/about" legacyBehavior passHref>
                     <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent text-white hover:bg-white/10")}>
-                      About
+                      About 
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="bg-transparent text-white hover:bg-white/10">Pro Tribe</NavigationMenuTrigger>
+                  <NavigationMenuTrigger className="bg-transparent text-white hover:bg-white/10">Ecosystem Brands</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="w-[400px] p-4 bg-[#010E2F]/95 backdrop-blur-sm">
                       <div className="flex items-center gap-2 text-white">
                         <Building2 className="h-5 w-5" />
-                        <div className="text-sm font-medium">{proTribeContent.title}</div>
+                        <div className="text-sm font-medium">{ecosystemContent.title}</div>
                       </div>
                       
-                      {/* Pro Tribe main page link */}
+                      {/* Ecosystem overview link */}
                       <Link
-                        href="/pro-tribe"
+                        href="/ecosystem"
                         className="block p-2 mt-4 text-white bg-white/10 hover:bg-white/20 rounded-md transition-colors font-medium"
                       >
-                        Pro Tribe Overview
+                        Active Revenue Drivers
                       </Link>
-                      {/* Pro Tribe updates link */}
+                      {/* Ecosystem updates link */}
                       <Link
-                        href="/pro-tribe/updates"
+                        href="/ecosystem/updates"
                         className="block p-2 mt-2 text-white bg-white/10 hover:bg-white/20 rounded-md transition-colors font-medium"
                       >
-                        Pro Tribe Updates
+                        Ecosystem Updates
                       </Link>
                       
                       <div className="grid gap-2 mt-3">
-                        <div className="text-white/80 text-xs uppercase tracking-wide pl-2">Our Businesses</div>
-                        {proTribeContent.businesses.map((business) => (
+                        <div className="text-white/80 text-xs uppercase tracking-wide pl-2">Brand Portfolio</div>
+                        {ecosystemContent.businesses.map((business) => (
                           <Link
                             key={business}
-                            href={`/pro-tribe/${business.toLowerCase().replace(/\s+/g, '-')}`}
+                            href={`/ecosystem/${business.toLowerCase().replace(/\s+/g, '-')}`}
                             className="block p-2 text-white hover:bg-white/10 rounded-md transition-colors"
                           >
                             {business}
@@ -177,49 +166,11 @@ export default function Navbar() {
                     </div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="bg-transparent text-white hover:bg-white/10">Life Connect</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className="w-[400px] p-4 bg-[#010E2F]/95 backdrop-blur-sm">
-                      <div className="flex items-center gap-2 text-white">
-                        <Leaf className="h-5 w-5" />
-                        <div className="text-sm font-medium">{lifeConnectContent.title}</div>
-                      </div>
-                      
-                      {/* Life Connect main page link */}
-                      <Link
-                        href="/life-connect"
-                        className="block p-2 mt-4 text-white bg-white/10 hover:bg-white/20 rounded-md transition-colors font-medium"
-                      >
-                        Life Connect Overview
-                      </Link>
-                      
-                      <div className="grid gap-2 mt-3">
-                        <div className="text-white/80 text-xs uppercase tracking-wide pl-2">Explore Areas</div>
-                        {lifeConnectContent.businesses.map((business) => (
-                          <Link
-                            key={business}
-                            href={`/life-connect/${business.toLowerCase().replace(/\s+/g, '-')}`}
-                            className="block p-2 text-white hover:bg-white/10 rounded-md transition-colors"
-                          >
-                            {business}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
+                {/* Life Connect and MaaHarvest are intentionally hidden */}
                 <NavigationMenuItem>
                   <Link href="/membership" legacyBehavior passHref>
                     <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent text-white hover:bg-white/10")}>
                       Membership
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <Link href="/pro-tribe/updates" legacyBehavior passHref>
-                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), "bg-transparent text-white hover:bg-white/10")}>
-                      Updates
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
@@ -269,7 +220,21 @@ export default function Navbar() {
                 className="text-white text-lg py-2 hover:bg-white/10 rounded-md px-3"
                 onClick={toggleMobileMenu}
               >
-                About
+                About FTE
+              </Link>
+              <Link
+                href="/contact"
+                className="text-white text-lg py-2 hover:bg-white/10 rounded-md px-3"
+                onClick={toggleMobileMenu}
+              >
+                For Founders
+              </Link>
+              <Link
+                href="/contact"
+                className="text-white text-lg py-2 hover:bg-white/10 rounded-md px-3"
+                onClick={toggleMobileMenu}
+              >
+                For Investors
               </Link>
               <Link 
                 href="/membership" 
@@ -279,44 +244,44 @@ export default function Navbar() {
                 Membership
               </Link>
               
-              {/* Pro Tribe Dropdown */}
+              {/* Ecosystem Dropdown */}
               <div className="py-2">
                 <button 
-                  onClick={toggleProTribe}
+                  onClick={toggleEcosystem}
                   className="flex items-center justify-between w-full text-white text-lg py-2 px-3 hover:bg-white/10 rounded-md"
                   type="button"
                 >
-                  <span>Pro Tribe</span>
-                  {isProTribeOpen ? (
+                  <span>Ecosystem Brands</span>
+                  {isEcosystemOpen ? (
                     <ChevronDown className="h-5 w-5" />
                   ) : (
                     <ChevronRight className="h-5 w-5" />
                   )}
                 </button>
                 
-                {isProTribeOpen && (
+                {isEcosystemOpen && (
                   <div className="mt-1 space-y-1 pl-3">
                     <Link
-                      href="/pro-tribe"
+                      href="/ecosystem"
                       className="flex items-center text-white py-2 hover:bg-white/10 rounded-md px-3 font-medium"
                       onClick={toggleMobileMenu}
                     >
                       <Building2 className="h-4 w-4 mr-2" />
-                      Pro Tribe Overview
+                      Ecosystem Overview
                     </Link>
                         <Link
-                          href="/pro-tribe/updates"
+                          href="/ecosystem/updates"
                           className="flex items-center text-white py-2 hover:bg-white/10 rounded-md px-3 font-medium"
                           onClick={toggleMobileMenu}
                         >
                           <Building2 className="h-4 w-4 mr-2" />
-                          Pro Tribe Updates
+                          Ecosystem Updates
                         </Link>
                     <div className="pl-2 border-l border-white/20 ml-1 space-y-1 mt-2">
-                      {proTribeContent.businesses.map((business) => (
+                      {ecosystemContent.businesses.map((business) => (
                         <Link
                           key={business}
-                          href={`/pro-tribe/${business.toLowerCase().replace(/\s+/g, '-')}`}
+                          href={`/ecosystem/${business.toLowerCase().replace(/\s+/g, '-')}`}
                           className="flex items-center text-white/80 py-2 hover:bg-white/10 rounded-md px-3 hover:text-white"
                           onClick={toggleMobileMenu}
                         >
@@ -328,60 +293,14 @@ export default function Navbar() {
                 )}
               </div>
               
-              {/* Life Connect Dropdown */}
-              <div className="py-2">
-                <button 
-                  onClick={toggleLifeConnect}
-                  className="flex items-center justify-between w-full text-white text-lg py-2 px-3 hover:bg-white/10 rounded-md"
-                  type="button"
-                >
-                  <span>Life Connect</span>
-                  {isLifeConnectOpen ? (
-                    <ChevronDown className="h-5 w-5" />
-                  ) : (
-                    <ChevronRight className="h-5 w-5" />
-                  )}
-                </button>
-                
-                {isLifeConnectOpen && (
-                  <div className="mt-1 space-y-1 pl-3">
-                    <Link
-                      href="/life-connect"
-                      className="flex items-center text-white py-2 hover:bg-white/10 rounded-md px-3 font-medium"
-                      onClick={toggleMobileMenu}
-                    >
-                      <Leaf className="h-4 w-4 mr-2" />
-                      Life Connect Overview
-                    </Link>
-                    <div className="pl-2 border-l border-white/20 ml-1 space-y-1 mt-2">
-                      {lifeConnectContent.businesses.map((business) => (
-                        <Link
-                          key={business}
-                          href={`/life-connect/${business.toLowerCase().replace(/\s+/g, '-')}`}
-                          className="flex items-center text-white/80 py-2 hover:bg-white/10 rounded-md px-3 hover:text-white"
-                          onClick={toggleMobileMenu}
-                        >
-                          {business}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
+              {/* Life Connect and MaaHarvest are intentionally hidden */}
               
               <Link 
                 href="/contact" 
                 className="text-white text-lg py-2 hover:bg-white/10 rounded-md px-3"
                 onClick={toggleMobileMenu}
               >
-                Contact
-              </Link>
-              <Link 
-                href="/pro-tribe/updates" 
-                className="text-white text-lg py-2 hover:bg-white/10 rounded-md px-3"
-                onClick={toggleMobileMenu}
-              >
-                Updates
+                Contact / Apply
               </Link>
             </nav>
           </div>

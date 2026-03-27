@@ -4,18 +4,18 @@ import { motion } from 'framer-motion';
 import TeamMember from './TeamMember';
 
 export default function Team() {
-  // Updated team members data with the provided information
+  // Founder-led core team profile for public site consistency.
   const teamMembers = [
       {
       name: "Curtis Randolph",
-      role: "CEO",
-      bio: "Curtis Randolph is the visionary Founder and CEO of Future Trends Enterprise. Driven by a passion for bridging technology and social impact, he has established the company as a leader in creating innovative ecosystems. Curtis's focus is on empowering both communities and businesses to thrive in the modern technological landscape.",
+      role: "Founder",
+      bio: "Curtis Randolph is the founder of Future Trends Enterprise, leading ecosystem strategy across venture building, partnerships, and operating brand growth.",
       image: "/assets/team/curtis.webp" // Update with actual image path
     },
     {
       name: "Ben Larkpor",
-      role: "Founder",
-      bio: "Visionary leader with a passion for bridging technology and social impact. Ben founded Future Trends Enterprise to create innovative ecosystems that empower communities and businesses.",
+      role: "Strategic Operations",
+      bio: "Ben supports strategic planning and execution across FTE ventures, helping align growth priorities with ecosystem-wide outcomes.",
       image: "/assets/team/ben.jpeg" // Update with actual image path
     },
     // {
@@ -27,25 +27,25 @@ export default function Team() {
     {
       name: "Omari Sherif",
       role: "Business Strategist & Integrator",
-      bio: "Omari is a results-driven Business Strategist specializing in aligning operations, teams, and systems to drive growth and efficiency.",
+      bio: "Omari aligns operations, teams, and systems to help FTE ventures execute with speed and consistency.",
       image: "/assets/team/omari.png" // Update with actual image path
     },
     {
       name: "Timothy Neal",
       role: "Community Relations Director",
-      bio: "Timothy Neal excels in fostering meaningful connections between FTE and the communities it serves. He leads outreach initiatives, builds strategic partnerships, and advocates for inclusivity and economic empowerment.",
+      bio: "Timothy leads community and partnership initiatives that connect ventures to target audiences and ecosystem opportunities.",
       image: "/assets/team/tim.jpg" // Update with actual image path
     },
     {
       name: "Carmelle Neal",
       role: "Community Relations Director",
-      bio: "Carmelle has over a decade of experience in community outreach initiatives. With a passion for relationship-building, Carmelle ensures FTE remains engaged with its members, stakeholders, and broader networks, strengthening its impact and community-driven mission.",
+      bio: "Carmelle helps steward stakeholder relationships and outreach strategy across FTE programs and portfolio initiatives.",
       image: "/assets/team/car3.png"
     },
     {
       name: "Mimi Aremu",
       role: "Risk Strategy Advisor",
-      bio: "Specializing in identifying, assessing, and mitigating risks that impact business growth and sustainability. Mimi develops strategic frameworks to safeguard operations, ensuring compliance, financial stability, and resilience against market uncertainties.",
+      bio: "Mimi supports enterprise risk and resilience planning, helping ventures build durable operating models.",
       image: "/assets/team/mimi.jpeg"
     },
   ];
@@ -62,8 +62,8 @@ export default function Team() {
         >
           <h2 className="text-4xl font-bold text-[#010E2F] mb-4">Our Team</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Meet the visionaries and experts behind Future Trends Enterprise who are driving innovation
-            and creating new opportunities in technology and business.
+            FTE operates with a founder-led core team and specialist collaborators across strategy, operations,
+            partnerships, and venture execution.
           </p>
         </motion.div>
 

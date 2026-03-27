@@ -164,7 +164,7 @@ export default function EntrepreneurLifestyle() {
               Get Started
             </a>
             <p className="mt-4 text-gray-600">
-              Already a Pro Tribe member? <a href="/login" className="text-blue-600 font-medium">Log in here</a>
+              Already an Ecosystem member? <a href="/login" className="text-blue-600 font-medium">Log in here</a>
             </p>
           </motion.div>
         </div>

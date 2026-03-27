@@ -41,7 +41,7 @@ export default function MembershipHero() {
             transition={{ duration: 0.7 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
           >
-            Membership Tiers
+            Membership Pathways
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -49,7 +49,7 @@ export default function MembershipHero() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="text-xl md:text-2xl text-blue-100 max-w-2xl"
           >
-            Structured progression from entrepreneurial foundations to advanced wealth structuring
+            Select the right entry point for your current stage as a founder, investor, or visionary ecosystem builder.
           </motion.p>
           
           <motion.div
@@ -73,7 +73,7 @@ export default function MembershipHero() {
               </div>
               <div className="flex items-center">
                 <div className="w-3 h-3 bg-blue-300 rounded-full mr-2"></div>
-                <span>Progression</span>
+                <span>Ecosystem Access</span>
               </div>
             </div>
           </motion.div>

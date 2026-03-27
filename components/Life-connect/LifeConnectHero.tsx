@@ -11,8 +11,8 @@ interface LifeConnectHeroProps {
 }
 
 export default function LifeConnectHero({ 
-  title = "Life Connect",
-  subtitle = "Our social engine platform focused on community building and increasing exposure for our partners."
+  title = "Technology / IP: Life Connect",
+  subtitle = "Life Connect is FTE's audience activation platform, translating venture stories into visibility, demand, and ecosystem growth."
 }: LifeConnectHeroProps) {
   return (
     <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">

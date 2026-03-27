@@ -257,7 +257,7 @@ const defaultServices = [
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-8">
                 <h3 className="text-2xl font-bold text-white">{name}</h3>
-                <p className="text-white/80">Part of the Pro Tribe Ecosystem</p>
+                <p className="text-white/80">Part of the Ecosystem</p>
               </div>
             </motion.div>
           </div>
@@ -310,7 +310,7 @@ const defaultServices = [
         </div>
       </section>
 
-      {/* Pro Tribe Connection */}
+      {/* Ecosystem Connection */}
       <section className="py-20 bg-gradient-to-br from-[#010E2F] via-[#0A2472] to-[#0E6BA8] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
@@ -320,9 +320,9 @@ const defaultServices = [
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold mb-6">Part of the Pro Tribe Ecosystem</h2>
+            <h2 className="text-3xl font-bold mb-6">Part of the Ecosystem</h2>
             <p className="text-lg text-white/80 max-w-3xl mx-auto">
-              {name} is a proud member of Pro Tribe, FTE's business ecosystem designed to foster growth, 
+              {name} is a proud member of the FTE ecosystem designed to foster growth, 
               collaboration, and community impact.
             </p>
           </motion.div>
@@ -338,7 +338,7 @@ const defaultServices = [
               <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl">
                 <Image 
                   src="/assets/logos/protribe.png"
-                  alt="Pro Tribe Logo"
+                  alt="Ecosystem Logo"
                   width={200}
                   height={200}
                   className="object-contain"
@@ -354,15 +354,15 @@ const defaultServices = [
               className="md:w-2/3"
             >
               <p className="text-white/90 mb-6">
-                Pro Tribe businesses benefit from shared resources, collaborative opportunities, and a supportive 
+                Ecosystem businesses benefit from shared resources, collaborative opportunities, and a supportive 
                 network of like-minded entrepreneurs dedicated to creating positive change in their communities.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a 
-                  href="/pro-tribe" 
+                  href="/ecosystem" 
                   className="bg-white text-[#010E2F] py-2 px-6 rounded-full font-medium hover:bg-blue-50 transition-colors"
                 >
-                  Learn About Pro Tribe
+                  Learn About Ecosystem
                 </a>
                 <a 
                   href="/contact" 

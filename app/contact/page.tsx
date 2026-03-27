@@ -3,7 +3,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Clock, Send, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, ArrowRight } from 'lucide-react';
 import ContactHero from '@/components/Contact/ContactHero';
 import ContactInfo from '@/components/Contact/ContactInfo';
 import ContactForm from '@/components/Contact/ContactForm';
@@ -14,8 +14,8 @@ export default function ContactPage() {
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
       <ContactHero 
-        title="Get in Touch" 
-        subtitle="We're here to answer your questions and help your business thrive." 
+        title="Contact / Apply" 
+        subtitle="Choose your path: founder application, investor inquiry, or partnership conversation with the FTE ecosystem team." 
       />
       
       {/* Contact Grid Section */}
@@ -32,8 +32,8 @@ export default function ContactPage() {
                 className="bg-white rounded-xl shadow-lg overflow-hidden"
               >
                 <div className="bg-gradient-to-r from-blue-600 to-blue-800 p-6">
-                  <h2 className="text-2xl font-bold text-white">Send Us a Message</h2>
-                  <p className="text-blue-100 mt-1"> We will get back to you as soon as possible</p>
+                  <h2 className="text-2xl font-bold text-white">Start Your Conversation</h2>
+                  <p className="text-blue-100 mt-1">Tell us whether you are a founder, investor, or strategic partner.</p>
                 </div>
                 <div className="p-6 md:p-8">
                   <ContactForm />
@@ -84,9 +84,9 @@ export default function ContactPage() {
                 viewport={{ once: true }}
                 className="bg-blue-600 text-white rounded-xl p-6 shadow-md"
               >
-                <h2 className="text-xl font-bold mb-4">Join Our Community</h2>
+                <h2 className="text-xl font-bold mb-4">Ecosystem Updates</h2>
                 <p className="text-blue-100 mb-6">
-                  Stay updated with our latest news, insights, and opportunities by subscribing to our newsletter.
+                  Get launch updates, venture highlights, and audience-specific opportunities.
                 </p>
                 <div className="flex">
                   <input 
@@ -131,11 +131,16 @@ export default function ContactPage() {
           >
             <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business?</h2>
             <p className="text-blue-100 max-w-2xl mx-auto mb-8">
-              Join our community of forward-thinking businesses and entrepreneurs who are building the future together.
+              Move forward with a clear next step built for your role in the ecosystem.
             </p>
-            <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50 px-8">
-              Schedule a Consultation <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50 px-8">
+                Apply as Founder <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8">
+                Inquire as Investor
+              </Button>
+            </div>
           </motion.div>
         </div>
       </section>

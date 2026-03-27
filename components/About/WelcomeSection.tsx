@@ -20,27 +20,22 @@ export default function WelcomeSection() {
             
             <div className="text-gray-700 space-y-6 text-lg">
               <p>
-                Future Trends Enterprise (FTE) is a forward-thinking technology company that seamlessly integrates advanced solutions across digital and physical spaces.
-                We transform innovation into opportunity by building interconnected ecosystems where community, technology, and commerce converge.
+                Future Trends Enterprise (FTE) operates as a parent venture ecosystem. We build, fund, and scale businesses by combining incubation, capital access, shared infrastructure, and strategic brand development.
               </p>
               <p>
-              Our  process defines who we are:
-              We identify markets with high upside potential, establish a built-in community around them, and apply strategic policies that scale profits. This approach ensures that every project we launch is grounded in real-world relevance, supported by engaged stakeholders, and positioned for long-term growth.
-              At the heart of our enterprise is a commitment to inclusive wealth creation. Through platforms like Pro Tribe and Life Connect, we empower visionary founders, creators, and community members to thrive inside an ecosystem designed for elevation.
+                Our operating model is straightforward: identify high-potential markets, incubate ventures with real demand, support them with capital-readiness and systems, then scale through community and cross-vertical execution.
               </p>
               <p>
-                These platforms offer strategic guidance, access to resources, collaboration opportunities, and shared value streams that accelerate both personal and business development.
-                Innovation drives our solutions, community fuels our momentum, and excellence defines our standards. Whether we are building digital systems, physical environments, or hybrid experiences, FTE ensures that every connection contributes to a larger goal: impact, scalability, and sustainable profit.
-                Future Trends Enterprise is more than a company; it's a movement designed to unlock potential, elevate communities, and reshape the way modern businesses grow.
+                Through brands like FTE Capital, Sage Hospitality, Zariel & Co, Good Chef Co, and our Ecosystem, we convert community momentum into durable enterprise value for founders, partners, and investors.
               </p>
               
               {/* Explore Memberships Button */}
               <div className="pt-6">
                 <Link 
-                  href="/membership"
+                  href="/contact"
                   className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full inline-flex items-center transition-colors duration-300"
                 >
-                  Explore Memberships
+                  Apply as Founder
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </div>
