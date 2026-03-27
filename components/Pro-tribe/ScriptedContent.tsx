@@ -25,7 +25,7 @@ export default function ScriptedContent() {
     },
     {
       title: "Cross-platform Collaborations",
-      description: "Partnership opportunities with artists, producers, and storytellers in the Pro Tribe ecosystem",
+      description: "Partnership opportunities with artists, producers, and storytellers across the ecosystem",
       icon: <Zap className="h-6 w-6 text-blue-600" />
     }
   ];
@@ -63,7 +63,7 @@ export default function ScriptedContent() {
             <div className="flex flex-col lg:flex-row gap-12 items-center">
               <div className="lg:w-1/2">
                 <p className="text-lg text-gray-700 mb-6">
-                  Scripted is the cultural ignition behind Zariel & Co Multimedia Partners, a production and entertainment company incubated within Pro Tribe. 
+                  Scripted is the cultural ignition behind Zariel & Co Multimedia Partners, a production and entertainment company incubated within Ecosystem. 
                   As the official social engine, Scripted turns creative development into community immersion—activating audiences, amplifying creators, and 
                   fueling visibility for projects born at the intersection of art, tech, and purpose.
                 </p>

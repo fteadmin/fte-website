@@ -1,5 +1,4 @@
 import { ArrowRight } from 'lucide-react';
-import Link from 'next/link';
 
 // Components
 import AboutHero from '@/components/About/AboutHero';
@@ -16,7 +15,7 @@ export default function AboutPage() {
     <main className="bg-white">
       <AboutHero 
         title="About Future Trends Enterprise" 
-        subtitle="Building innovative communities that foster growth, collaboration, and sustainable success."
+        subtitle="FTE is the parent ecosystem that builds, funds, and scales ventures through capital access, incubation, technology, and operating brands."
       />
       
       {/* Welcome Section with image on the right */}
@@ -25,9 +24,9 @@ export default function AboutPage() {
       {/* Key Achievements and Impact */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-center">Key Achievements and Impact</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-center">Ecosystem Proof Points</h2>
           <p className="text-blue-100 max-w-3xl mx-auto text-center mb-16">
-            FTE has established itself as a significant player in community development and technology innovation.
+            Snapshot values shown here reflect current internal positioning as of March 2026 and are updated as operating data evolves.
           </p>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
@@ -38,15 +37,15 @@ export default function AboutPage() {
             /> */}
             
             <StatisticCard 
-              value="2+" 
-              label="Established Community Verticals" 
-              description="Two communities have been successfully built, embodying the company's mission of nurturing thriving ecosystems."
+              value="9" 
+              label="Ecosystem Verticals" 
+              description="Active and emerging ventures spanning capital, hospitality, media, culinary, fashion, wellness, and community platforms."
             />
             
             <StatisticCard 
-              value="15" 
-              label="Incubated Companies" 
-              description="Fifteen companies currently in our incubator been funded, furthering FTE's legacy of fostering entrepreneurship and innovation."
+              value="35+" 
+              label="Active Paying Customers" 
+              description="Current operating footprint across ecosystem services, programs, and venture-linked revenue activity."
             />
             
             {/* <StatisticCard 
@@ -64,9 +63,9 @@ export default function AboutPage() {
       {/* Call to Action */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">Join Our Thriving Ecosystem</h2>
+          <h2 className="text-3xl font-bold mb-6">Build With The FTE Ecosystem</h2>
           <p className="text-gray-600 mb-8 text-lg">
-            Whether you are just starting your entrepreneurial journey or looking to build a lasting legacy, FTE offers the platform you need to succeed at every stage.
+            Founders, investors, and strategic partners can engage FTE through audience-specific pathways designed for execution and long-term enterprise value.
           </p>
 
           {/* Email Button */}

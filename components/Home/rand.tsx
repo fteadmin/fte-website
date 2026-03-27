@@ -47,12 +47,12 @@ export default function WhoWeAre() {
         >
           <h3 className="text-2xl font-bold text-[#010E2F] mb-6">Our Ecosystems</h3>
           <div className="grid md:grid-cols-2 gap-6">
-            {/* Pro Tribe Card */}
+            {/* Ecosystem Card */}
             <div className="group relative h-64 rounded-xl overflow-hidden">
               <div className="absolute inset-0">
                 <Image
                   src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
-                  alt="Pro Tribe"
+                  alt="Ecosystem"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -61,7 +61,7 @@ export default function WhoWeAre() {
               <div className="relative h-full p-6 flex flex-col justify-between">
                 <div className="flex items-center gap-3">
                   <Building2 className="h-7 w-7 text-white" />
-                  <h3 className="text-xl font-semibold text-white">Pro Tribe Ecosystem</h3>
+                  <h3 className="text-xl font-semibold text-white">Ecosystem</h3>
                 </div>
                 <p className="text-white/90 mt-2">
                   A comprehensive business incubator that builds new ventures, collaborates with existing businesses, and

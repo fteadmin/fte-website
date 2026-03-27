@@ -10,8 +10,8 @@ interface ProTribeHeroProps {
 }
 
 export default function ProTribeHero({ 
-  title = "Pro Tribe Ecosystem", 
-  subtitle = "A dynamic, interconnected network designed to build, scale, and sustain ventures through a holistic approach that integrates information, data, community, support, and technology."
+  title = "Ecosystem Brands",
+  subtitle = "FTE's venture-building and operating layer, designed to incubate, support, and scale founder-led brands across priority verticals."
 }: ProTribeHeroProps) {
   return (
     <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
@@ -53,7 +53,7 @@ export default function ProTribeHero({
             <div className="w-48 h-48 md:w-56 md:h-56 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center p-6 shadow-lg">
               <Image 
                 src="/assets/logos/protribe.png" 
-                alt="Pro Tribe Logo" 
+                alt="Ecosystem Logo" 
                 width={180} 
                 height={180} 
                 className="object-contain" 

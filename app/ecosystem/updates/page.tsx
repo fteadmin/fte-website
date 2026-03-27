@@ -2,7 +2,7 @@ import React from 'react';
 import ProtribeUpdates from '@/components/Pro-tribe/ProtribeUpdates';
 import Link from 'next/link';
 
-export default function ProTribeUpdatesPage() {
+export default function EcosystemUpdatesPage() {
   return (
     <main className="bg-white min-h-screen">
       <section className="py-20 bg-gradient-to-br from-[#010E2F] via-[#0A2472] to-[#0E6BA8] text-white">

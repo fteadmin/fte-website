@@ -52,13 +52,14 @@ const LifeConnectArea = ({ name, description, icon, features, logoSrc }: LifeCon
 export default function LifeConnectContent() {
   // Life Connect areas with their features and logos
   const areas = [
-    { 
-      name: "MaaHarvest", 
-      icon: <Utensils className="h-6 w-6 text-blue-400" />,
-      logoSrc: "/assets/logos/mah.jpg",
-      description: "Fresh, locally-sourced organic produce and sustainable goods supporting local farmers and artisans.",
-      features: ["Farm-to-Table Products", "Zero-Waste Packaging", "Community Supported Agriculture"]
-    }, 
+    // MaaHarvest intentionally hidden
+    // {
+    //   name: "MaaHarvest",
+    //   icon: <Utensils className="h-6 w-6 text-blue-400" />,
+    //   logoSrc: "/assets/logos/mah.jpg",
+    //   description: "Fresh, locally-sourced organic produce and sustainable goods supporting local farmers and artisans.",
+    //   features: ["Farm-to-Table Products", "Zero-Waste Packaging", "Community Supported Agriculture"]
+    // },
     { 
       name: "Entrepreneur Lifestyle", 
       icon: <Briefcase className="h-6 w-6 text-blue-400" />,
@@ -88,14 +89,14 @@ export default function LifeConnectContent() {
             className="flex flex-col lg:flex-row gap-12 items-center"
           >
             <div className="lg:w-1/2">
-              <h2 className="text-4xl font-bold text-[#010E2F] mb-6">Life Connect- of Future Trends Enterprise Inc. (FTE)</h2>
+              <h2 className="text-4xl font-bold text-[#010E2F] mb-6">Life Connect Platform by Future Trends Enterprise</h2>
               <p className="text-lg text-gray-700 mb-8">
-                Life Connect is designed to amplify and activate the businesses developed within the Pro Tribe incubator. 
+                Life Connect is designed to amplify and activate brands developed inside the broader FTE ecosystem. 
                 More than a platform—Life Connect is a multi-channel visibility and engagement engine, offering entrepreneurs 
                 the digital real estate, audience reach, and exposure necessary to grow loyal customer bases and maximize impact.
               </p>
               <p className="text-lg text-gray-700">
-                As Pro Tribe incubates new ventures across various verticals—from wellness and fashion to tech and hospitality—Life Connect 
+                As FTE incubates and scales ventures across verticals, Life Connect 
                 serves as the connective tissue that links these businesses to the communities they serve. It creates branded channels, 
                 themed social platforms, curated digital events, and interactive campaigns that are all designed to drive awareness, 
                 generate leads, and foster trust in the marketplace.
@@ -114,7 +115,7 @@ export default function LifeConnectContent() {
         </div>
       </section>
 
-      {/* ProTribe Connection Section */}
+      {/* Ecosystem Connection Section */}
       <section className="py-20 bg-gradient-to-r from-[#010E2F] to-[#0A2472]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -131,7 +132,7 @@ export default function LifeConnectContent() {
               </div>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              The Visibility Engine for <span className="text-blue-300">Pro Tribe</span> Entrepreneurs
+              The Visibility Engine for <span className="text-blue-300">Ecosystem</span> Entrepreneurs
             </h2>
             <p className="text-lg text-white/80 max-w-3xl mx-auto">
               Through Life Connect, FTE extends its ecosystem beyond business development into full-scale community activation.
@@ -165,7 +166,7 @@ export default function LifeConnectContent() {
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="h-5 w-5 text-blue-400 flex-shrink-0 mt-0.5" />
-                    <span className="text-white/80">Lead generation loops that recycle attention back into the Pro Tribe</span>
+                    <span className="text-white/80">Lead generation loops that recycle attention back into the ecosystem</span>
                   </li>
                 </ul>
               </div>

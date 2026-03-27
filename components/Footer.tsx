@@ -20,7 +20,7 @@ export default function Footer() {
           >
             <h3 className="text-xl font-bold mb-4">Future Trends Enterprise</h3>
             <p className="text-white/80 mb-6">
-              Building innovative communities that foster growth, collaboration, and sustainable success.
+              FTE builds, funds, and scales ventures through capital access, incubation, technology, and operating brands.
             </p>
             <div className="flex space-x-4">
               <Link href="https://facebook.com" className="hover:text-white/80 transition-colors">
@@ -49,19 +49,16 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link href="/about" className="text-white/80 hover:text-white transition-colors">
-                  About Us
+                  About 
                 </Link>
               </li>
+          
               <li>
-                <Link href="/pro-tribe" className="text-white/80 hover:text-white transition-colors">
-                  Pro Tribe
+                <Link href="/ecosystem" className="text-white/80 hover:text-white transition-colors">
+                  Ecosystem Brands
                 </Link>
               </li>
-              <li>
-                <Link href="/life-connect" className="text-white/80 hover:text-white transition-colors">
-                  Life Connect
-                </Link>
-              </li>
+           
               <li>
                 <Link href="/membership" className="text-white/80 hover:text-white transition-colors">
                   Membership
@@ -108,7 +105,7 @@ export default function Footer() {
           >
             <h3 className="text-xl font-bold mb-4">Newsletter</h3>
             <p className="text-white/80 mb-4">
-              Subscribe to our newsletter for updates and insights.
+              Get updates on ventures, ecosystem milestones, and founder opportunities.
             </p>
             <form className="space-y-2">
               <input
@@ -130,7 +127,7 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-4">
             <p className="text-white/80 text-sm">
-              Identifying markets. Empowering communities. Transforming futures.
+              Build. Fund. Scale.
             </p>
           </div>
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">

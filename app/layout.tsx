@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'FTE - Future Trends Enterprise',
-  description: 'Building Thriving Communities Through Innovation',
+  description: 'Future Trends Enterprise builds, funds, and scales ventures through capital access, incubation, technology, and operating brands.',
   icons: {
     icon: '/assets/logos/logo.png',
     shortcut: '/assets/logos/logo.png',

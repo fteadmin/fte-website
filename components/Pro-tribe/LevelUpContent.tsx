@@ -36,7 +36,7 @@ export default function LevelUpContent() {
     "Community support from fellow entrepreneurs",
     "Strategic content that drives lead generation",
     "Credibility building through consistent exposure",
-    "Access to Pro Tribe's business incubator resources",
+    "Access to Ecosystem's business incubator resources",
     "Transformation of business milestones into marketing moments"
   ];
 
@@ -63,7 +63,7 @@ export default function LevelUpContent() {
             <div className="flex flex-col lg:flex-row gap-12 items-center">
               <div className="lg:w-1/2">
                 <p className="text-lg text-gray-700 mb-6">
-                  Level Up is the activation core of NXNLVL, the business-building vertical of Pro Tribe, created to accelerate growth for 
+                  Level Up is the activation core of NXNLVL, the business-building vertical of Ecosystem, created to accelerate growth for 
                   emerging entrepreneurs and early-stage ventures. As the social engine of NXNLVL, Level Up transforms brand development 
                   into a public journey—where building a business is not just a task, but a movement.
                 </p>
@@ -188,7 +188,7 @@ export default function LevelUpContent() {
                     </div>
                     <div>
                       <h4 className="font-medium text-white mb-1">Lead Generation</h4>
-                      <p className="text-white/70 text-sm">Traffic back to Pro Tribe's incubator</p>
+                      <p className="text-white/70 text-sm">Traffic back to Ecosystem's incubator</p>
                     </div>
                   </div>
                   
@@ -209,7 +209,7 @@ export default function LevelUpContent() {
                   href="/pro-tribe" 
                   className="inline-block px-6 py-3 bg-white/10 backdrop-blur-sm hover:bg-white/20 border border-white/30 text-white rounded-lg transition-all duration-300"
                 >
-                  Explore Pro Tribe
+                  Explore Ecosystem
                 </a>
               </div>
             </div>

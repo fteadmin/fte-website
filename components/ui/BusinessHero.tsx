@@ -47,7 +47,7 @@ export default function BusinessHero({
       
       {/* Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Back to Pro Tribe link */}
+        {/* Back to Ecosystem link */}
         <motion.div 
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -59,7 +59,7 @@ export default function BusinessHero({
             className="inline-flex items-center text-blue-300 hover:text-white transition-colors"
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
-            <span>Back to Pro Tribe</span>
+            <span>Back to Ecosystem</span>
           </Link>
         </motion.div>
         

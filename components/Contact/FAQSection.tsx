@@ -48,23 +48,23 @@ export default function FAQSection() {
   const faqs = [
     {
       question: "How can FTE help my business grow?",
-      answer: "Future Trends Enterprise provides technology-powered solutions, vertical-specific applications, and business incubation services designed to streamline operations and drive growth. Our ecosystem approach connects businesses with resources, mentorship, and community support to foster sustainable success."
+      answer: "FTE supports growth through a venture ecosystem model: incubation, capital-readiness support, shared operating infrastructure, and ecosystem distribution pathways. Founders receive strategic guidance and access to aligned brand and community channels."
     },
     {
       question: "What industries does FTE specialize in?",
-      answer: "We specialize in multiple verticals including health and wellness, culinary & agriculture, e-commerce, finance, multimedia, and education. Our solutions are tailored to meet the specific challenges and opportunities within each industry."
+      answer: "Our portfolio spans capital, hospitality, media, culinary, fashion, wellness, and community-driven platforms. We focus on verticals where culture, demand, and operating leverage can compound over time."
     },
     {
       question: "How long does it take to implement your solutions?",
       answer: "Implementation timelines vary depending on the complexity of your needs and the scope of the project. Typically, our basic solutions can be implemented within 4-8 weeks, while more comprehensive ecosystem integrations may take 3-6 months. We work closely with you to establish clear timelines and milestones."
     },
     {
-      question: "Do you offer ongoing support after implementation?",
-      answer: "Yes, we offer various support packages to ensure your continued success. These include technical support, maintenance, updates, and strategic consultations to help you maximize the value of your solution as your business evolves."
+      question: "Do you work with investors and strategic partners?",
+      answer: "Yes. We provide investor and partner pathways with ecosystem context, venture visibility, and opportunities to engage with active and emerging brands aligned to the FTE thesis."
     },
     {
-      question: "How does your business incubation program work?",
-      answer: "Our incubation program supports early-stage businesses with technology resources, mentorship, and infrastructure. We provide strategic guidance on tech implementation, operational frameworks, and business development. Businesses in our program benefit from our ecosystem network, shared resources, and collaborative environment."
+      question: "How does founder onboarding work?",
+      answer: "Founder onboarding starts with a fit conversation, then moves into ecosystem alignment, growth priorities, and a scoped support path. The process clarifies whether a venture is best positioned for incubation, strategic services, or capital-readiness support."
     }
   ];
   

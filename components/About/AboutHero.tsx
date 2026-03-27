@@ -57,19 +57,19 @@ export default function AboutHero({ title, subtitle }: AboutHeroProps) {
             <div className="flex flex-wrap gap-x-8 gap-y-4 text-blue-100">
               <div className="flex items-center">
                 <div className="w-3 h-3 bg-blue-300 rounded-full mr-2"></div>
-                <span>Innovation</span>
+                <span>Venture Building</span>
               </div>
               <div className="flex items-center">
                 <div className="w-3 h-3 bg-blue-300 rounded-full mr-2"></div>
-                <span>Technology</span>
+                <span>Capital Access</span>
               </div>
               <div className="flex items-center">
                 <div className="w-3 h-3 bg-blue-300 rounded-full mr-2"></div>
-                <span>Community</span>
+                <span>Shared Infrastructure</span>
               </div>
               <div className="flex items-center">
                 <div className="w-3 h-3 bg-blue-300 rounded-full mr-2"></div>
-                <span>Growth</span>
+                <span>Technology / IP</span>
               </div>
             </div>
           </motion.div>

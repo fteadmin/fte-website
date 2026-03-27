@@ -60,6 +60,9 @@ export default function BusinessPage({
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
+                <span className="inline-flex mb-3 text-xs uppercase tracking-wide bg-white/15 text-white px-2.5 py-1 rounded-full border border-white/20">
+                  Ecosystem Brand Profile
+                </span>
                 <h1 className="text-4xl font-bold text-white mb-4">{name}</h1>
                 <Link 
                   href={website}
@@ -87,7 +90,7 @@ export default function BusinessPage({
               transition={{ duration: 0.5 }}
               className="md:col-span-2"
             >
-              <h2 className="text-2xl font-semibold mb-6 text-gray-900">About {name}</h2>
+              <h2 className="text-2xl font-semibold mb-6 text-gray-900">How {name} Fits The FTE Ecosystem</h2>
               <div className="prose prose-lg max-w-none text-gray-800">
                 <p>{description}</p>
               </div>
