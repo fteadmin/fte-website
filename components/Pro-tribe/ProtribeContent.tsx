@@ -27,7 +27,7 @@ export default function ProtribeContent() {
     }
   };
 
-  // Pro Tribe businesses with updated categories
+  // Ecosystem businesses with updated categories
   const businesses = [
     { 
       name: "Sage Hospitality", 
@@ -82,10 +82,10 @@ export default function ProtribeContent() {
           >
             <h2 className="text-3xl font-bold mb-6 text-[#010E2F]">A Progressive Framework for Success</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              The Pro Tribe Ecosystem is more than just a business incubator—it is a dynamic, interconnected network designed to build, scale, and sustain ventures through a holistic approach that integrates information, data, community, support, and technology.
+              The Ecosystem is more than just a business incubator—it is a dynamic, interconnected network designed to build, scale, and sustain ventures through a holistic approach that integrates information, data, community, support, and technology.
             </p>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto mt-4">
-              At Pro Tribe, we believe that success is not achieved in isolation but through collaboration, resource-sharing, and strategic innovation. Our framework is designed to maximize economic circulation within our ecosystem, ensuring that every dollar spent fuels the collective prosperity of our members.
+              At Ecosystem, we believe that success is not achieved in isolation but through collaboration, resource-sharing, and strategic innovation. Our framework is designed to maximize economic circulation within our ecosystem, ensuring that every dollar spent fuels the collective prosperity of our members.
             </p>
           </motion.div>
 
@@ -112,7 +112,7 @@ export default function ProtribeContent() {
               </div>
               <h3 className="text-xl font-semibold mb-3 text-[#010E2F]">Community-Driven Success & Network Expansion</h3>
               <p className="text-gray-600">
-                The Pro Tribe community is the foundation of our ecosystem, built on shared success and cooperative economics.
+                The Ecosystem community is the foundation of our ecosystem, built on shared success and cooperative economics.
               </p>
             </motion.div>
 
@@ -196,7 +196,7 @@ export default function ProtribeContent() {
               <div className="lg:w-1/2">
                 <h2 className="text-3xl font-bold mb-6 text-[#010E2F]">Community-Driven Success & Network Expansion</h2>
                 <p className="text-lg text-gray-700 mb-6">
-                  The Pro Tribe community is the foundation of our ecosystem, built on shared success and cooperative economics. Members benefit from:
+                  The Ecosystem community is the foundation of our ecosystem, built on shared success and cooperative economics. Members benefit from:
                 </p>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
@@ -284,7 +284,7 @@ export default function ProtribeContent() {
               <div className="lg:w-1/2">
                 <h2 className="text-3xl font-bold mb-6 text-[#010E2F]">Cutting-Edge Technology & Digital Infrastructure</h2>
                 <p className="text-lg text-gray-700 mb-6">
-                  The Pro Tribe platform is equipped with AI-driven tools and automated solutions to enhance efficiency, scalability, and innovation. Through:
+                  The Ecosystem platform is equipped with AI-driven tools and automated solutions to enhance efficiency, scalability, and innovation. Through:
                 </p>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
@@ -327,7 +327,7 @@ export default function ProtribeContent() {
           >
             <h2 className="text-3xl font-bold mb-6">A Circular Economy Model</h2>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              Every interaction within the Pro Tribe Ecosystem is designed to keep resources circulating within the community.
+              Every interaction within the Ecosystem is designed to keep resources circulating within the community.
             </p>
           </motion.div>
 
@@ -377,7 +377,7 @@ export default function ProtribeContent() {
             className="text-center mt-12"
           >
             <p className="text-lg text-white/80 max-w-3xl mx-auto">
-              Through the strategic fusion of information, data, community, support, and technology, Pro Tribe is redefining business success—not just as individual achievement, but as a collective movement toward financial independence, innovation, and wealth-building.
+              Through the strategic fusion of information, data, community, support, and technology, Ecosystem is redefining business success—not just as individual achievement, but as a collective movement toward financial independence, innovation, and wealth-building.
             </p>
           </motion.div>
         </div>
@@ -395,7 +395,7 @@ export default function ProtribeContent() {
           >
               <h2 className="text-3xl font-bold mb-6 text-[#010E2F]">Ecosystem Brand Portfolio</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                Explore active and emerging ventures connected to the Pro Tribe operating layer, each contributing to the broader FTE growth model.
+                Explore active and emerging ventures connected to the Ecosystem operating layer, each contributing to the broader FTE growth model.
             </p>
           </motion.div>
 
@@ -447,7 +447,7 @@ export default function ProtribeContent() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl font-bold mb-6 text-[#010E2F]">Ready to Join Pro Tribe?</h2>
+            <h2 className="text-3xl font-bold mb-6 text-[#010E2F]">Ready to Join Ecosystem?</h2>
             <p className="text-lg text-gray-700 mb-8 max-w-3xl mx-auto">
               Whether you're looking to start a new business, grow an existing one, or collaborate with our ecosystem, 
               we're here to help you succeed. Take the first step towards joining our thriving community.

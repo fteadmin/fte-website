@@ -76,7 +76,7 @@ export default function ProtribeUpdates() {
           </div>
           <h2 className="text-4xl font-bold text-[#010E2F] mb-4">What's Happening Now</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Stay in the loop with current campaigns, member activations, and exciting announcements across the Pro Tribe ecosystem.
+            Stay in the loop with current campaigns, member activations, and exciting announcements across the ecosystem.
           </p>
         </motion.div>
 
@@ -157,7 +157,7 @@ export default function ProtribeUpdates() {
           <div className="bg-gradient-to-br from-[#010E2F] via-[#0A2472] to-[#0E6BA8] rounded-2xl p-12">
             <h3 className="text-3xl font-bold text-white mb-4">Want to Feature Your Campaign?</h3>
             <p className="text-white/90 mb-8 max-w-2xl mx-auto">
-              Pro Tribe members can showcase their latest initiatives, events, and campaigns on this page.
+              Ecosystem members can showcase their latest initiatives, events, and campaigns on this page.
             </p>
             <Link 
               href="/contact" 
