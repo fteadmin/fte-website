@@ -6,24 +6,18 @@ import TeamMember from './TeamMember';
 export default function Team() {
   // Founder-led core team profile for public site consistency.
   const teamMembers = [
-      {
-      name: "Curtis Randolph",
-      role: "Founder",
-      bio: "Curtis Randolph is the founder of Future Trends Enterprise, leading ecosystem strategy across venture building, partnerships, and operating brand growth.",
-      image: "/assets/team/curtis.webp" // Update with actual image path
-    },
     {
       name: "Ben Larkpor",
-      role: "Strategic Operations",
-      bio: "Ben supports strategic planning and execution across FTE ventures, helping align growth priorities with ecosystem-wide outcomes.",
-      image: "/assets/team/ben.jpeg" // Update with actual image path
+      role: "Founder",
+      bio: "Ben Larkpor is the founder of Future Trends Enterprise, leading ecosystem strategy across venture building, partnerships, and operating brand growth.",
+      image: "/assets/team/ben.jpeg"
     },
-    // {
-    //   name: "Alfonzo Spigner",
-    //   role: "Chief Creative Officer (CCO)",
-    //   bio: "Leads FTE's creative vision, brand identity, and innovation strategies. Alfonzo oversees design, marketing, content, and product aesthetics to ensure consistency and engagement across all platforms.",
-    //   image: "/assets/team/alf.jpg" // Update with actual image path
-    // },
+    {
+      name: "Alfonzo Spigner",
+      role: "Strategic Operations",
+      bio: "Alfonzo supports strategic planning and execution across FTE ventures, helping align growth priorities with ecosystem-wide outcomes.",
+      image: "/assets/team/alf.jpg"
+    },
     {
       name: "Omari Sherif",
       role: "Business Strategist & Integrator",

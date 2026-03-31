@@ -15,7 +15,7 @@ export default function AboutPage() {
     <main className="bg-white">
       <AboutHero 
         title="About Future Trends Enterprise" 
-        subtitle="FTE is the parent ecosystem that builds, funds, and scales ventures through capital access, incubation, technology, and operating brands."
+        subtitle="The parent ecosystem powering the next generation of culture-driven enterprise — where vision meets infrastructure and communities become lasting value."
       />
       
       {/* Welcome Section with image on the right */}
@@ -30,29 +30,29 @@ export default function AboutPage() {
           </p>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-            {/* <StatisticCard 
-              value="15M+" 
-              label="Annual Revenue" 
-              description="With a revenue stream of 15 million, the company showcases strong financial health and growth."
-            /> */}
-            
-            <StatisticCard 
-              value="9" 
-              label="Ecosystem Verticals" 
+            <StatisticCard
+              value="9"
+              label="Ecosystem Verticals"
               description="Active and emerging ventures spanning capital, hospitality, media, culinary, fashion, wellness, and community platforms."
             />
-            
-            <StatisticCard 
-              value="35+" 
-              label="Active Paying Customers" 
-              description="Current operating footprint across ecosystem services, programs, and venture-linked revenue activity."
+
+            <StatisticCard
+              value="4"
+              label="Active IPs"
+              description="Four active intellectual properties across the FTE ecosystem powering ventures and brand development."
             />
-            
-            {/* <StatisticCard 
-              value="$420M+" 
-              label="Company Evaluation" 
-              description="Evaluated at an impressive $420 million, Future Trends Enterprise has established itself as a significant player in community development."
-            /> */}
+
+            <StatisticCard
+              value="4"
+              label="Automotive Patents"
+              description="Four automotive patents reflecting FTE's commitment to innovation and technology-driven enterprise."
+            />
+
+            <StatisticCard
+              value="$1.2M+"
+              label="Assets"
+              description="Current asset base across the FTE ecosystem supporting operations, ventures, and growth initiatives."
+            />
           </div>
         </div>
       </section>

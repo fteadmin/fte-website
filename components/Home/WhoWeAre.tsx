@@ -46,7 +46,7 @@ export default function WhoWeAre() {
         >
           <h2 className="text-4xl font-bold text-[#010E2F] mb-6">What FTE Is</h2>
           <p className="text-lg text-gray-700 max-w-4xl mx-auto">
-            Future Trends Enterprise is a venture ecosystem that builds, funds, and scales businesses across culture,
+            Future Trends Enterprise is a venture ecosystem that develops, accelerates, and expands businesses across culture,
             technology, hospitality, wellness, and community-driven industries.
           </p>
         </motion.div>

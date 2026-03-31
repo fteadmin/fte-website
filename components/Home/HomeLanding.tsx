@@ -236,7 +236,7 @@ export default function HomeLanding() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-8 font-vietnam-pro leading-tight md:leading-none"
               >
-                Build. Fund. Scale.
+                Where Capital Meets Culture.
               </motion.h1>
               
               <motion.p
@@ -245,7 +245,7 @@ export default function HomeLanding() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="text-sm sm:text-base md:text-lg text-white/90 mb-6 sm:mb-10 font-vietnam-pro leading-relaxed max-w-md mx-auto md:mx-0"
               >
-                Future Trends Enterprise builds, funds, and scales ventures that transform communities into long-term enterprise value.
+                A venture ecosystem for founders, investors, and brands building what is next.
               </motion.p>
 
               <motion.div

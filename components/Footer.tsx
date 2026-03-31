@@ -20,7 +20,7 @@ export default function Footer() {
           >
             <h3 className="text-xl font-bold mb-4">Future Trends Enterprise</h3>
             <p className="text-white/80 mb-6">
-              FTE builds, funds, and scales ventures through capital access, incubation, technology, and operating brands.
+              A parent ecosystem where capital, incubation, and technology meet to grow lasting enterprise.
             </p>
             <div className="flex space-x-4">
               <Link href="https://facebook.com" className="hover:text-white/80 transition-colors">
@@ -83,7 +83,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-center gap-2 text-white/80">
                 <MapPin className="h-5 w-5 flex-shrink-0" />
-                <span> 777 Alameda 2nd Floor, Los Angeles, CA 90021</span>
+                <span>211 E Ocean Blvd, Long Beach, CA 90802</span>
               </li>
               <li className="flex items-center gap-2 text-white/80">
                 <Phone className="h-5 w-5 flex-shrink-0" />
@@ -127,7 +127,7 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-4">
             <p className="text-white/80 text-sm">
-              Build. Fund. Scale.
+              Where capital, incubation, technology, and culture converge.
             </p>
           </div>
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">

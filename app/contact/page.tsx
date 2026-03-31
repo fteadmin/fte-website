@@ -55,7 +55,7 @@ export default function ContactPage() {
                   <ContactInfo 
                     icon={<MapPin className="h-5 w-5 text-blue-600" />}
                     title="Office Location"
-                    content="777 Alameda 2nd Floor, Los Angeles, CA 90021"
+                    content="211 E Ocean Blvd, Long Beach, CA 90802"
                   />
                   <ContactInfo 
                     icon={<Phone className="h-5 w-5 text-blue-600" />}
@@ -148,13 +148,13 @@ export default function ContactPage() {
      {/* Map Section */}
     <section className="h-96 w-full">
       <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.7169701268!2d-118.25009848478976!3d34.03962168061125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c63c9fb08f9d%3A0xb5236eb2eb8877ae!2s777%20S%20Alameda%20St%202nd%20Floor%2C%20Los%20Angeles%2C%20CA%2090021!5e0!3m2!1sen!2sus!4v1680531342684!5m2!1sen!2sus" 
-        width="100%" 
-        height="100%" 
-        style={{ border: 0 }} 
-        allowFullScreen={false} 
+        src="https://maps.google.com/maps?q=211+E+Ocean+Blvd+Long+Beach+CA+90802&output=embed"
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        allowFullScreen={false}
         loading="lazy"
-        title="FTE office location at 777 Alameda 2nd Floor, Los Angeles"
+        title="FTE office location at 211 E Ocean Blvd, Long Beach, CA 90802"
       ></iframe>
     </section>
     </main>

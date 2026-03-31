@@ -20,7 +20,7 @@ export default function WelcomeSection() {
             
             <div className="text-gray-700 space-y-6 text-lg">
               <p>
-                Future Trends Enterprise (FTE) operates as a parent venture ecosystem. We build, fund, and scale businesses by combining incubation, capital access, shared infrastructure, and strategic brand development.
+                Future Trends Enterprise (FTE) operates as a parent venture ecosystem. We develop, accelerate, and expand businesses by combining incubation, capital access, shared infrastructure, and strategic brand development.
               </p>
               <p>
                 Our operating model is straightforward: identify high-potential markets, incubate ventures with real demand, support them with capital-readiness and systems, then scale through community and cross-vertical execution.
