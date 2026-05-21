@@ -60,8 +60,8 @@ export default function ContactPage() {
                   <ContactInfo 
                     icon={<Phone className="h-5 w-5 text-blue-600" />}
                     title="Phone Number"
-                    content="+1 (888) 948-1118"
-                    link="tel:+888948-1118"
+                    content="+1 (213)754-6388"
+                    link="tel:+2137546388"
                   />
                   <ContactInfo 
                     icon={<Mail className="h-5 w-5 text-blue-600" />}
